@@ -183,7 +183,7 @@
             </p>
         </div>
 
-    <form name="contato-femgi" method="POST" data-netlify="true" action="/" class="space-y-8">
+    <form id="meu-formulario" name="contato-femgi" method="POST" data-netlify="true" class="space-y-8">
     <input type="hidden" name="form-name" value="contato-femgi" />
 
     <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
@@ -205,6 +205,11 @@
         Enviar Mensagem
     </button>
 </form>
+
+<div id="mensagem-sucesso" class="hidden mt-6 text-[10px] uppercase tracking-widest text-green-600 italic">
+    Mensagem enviada com sucesso. Entraremos em contato em breve.
+</div>
+
     </div>
 </section>
 
@@ -229,6 +234,29 @@
         <img src="whatsapp.svg" alt="WhatsApp" class="w-7 h-7 md:w-10 md:h-10 object-contain transition-all duration-500 grayscale brightness-20000 invert group-hover:grayscale-0 group-hover:brightness-100 group-hover:invert-0">
     </div>
 </a>
+
+<script>
+  const myForm = document.getElementById("meu-formulario");
+  const successMsg = document.getElementById("mensagem-sucesso");
+
+  myForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(myForm);
+    
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then(() => {
+      // Esconde o formulário e mostra a mensagem de sucesso
+      myForm.style.display = "none";
+      successMsg.classList.remove("hidden");
+    })
+    .catch((error) => alert("Erro ao enviar: " + error));
+  });
+</script>
 
 </body>
 </html>
