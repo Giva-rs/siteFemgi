@@ -113,26 +113,29 @@
             </p>
         </div>
 
-        <form name="contato-femgi" method="POST" data-netlify="true" class="space-y-8">
-            <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
-                <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Nome</label>
-                <input type="text" name="name" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200" placeholder="Seu nome completo">
-            </div>
+       <form name="contato-femgi" method="POST" data-netlify="true" action="/" class="space-y-8">
+    
+    <input type="hidden" name="form-name" value="contato-femgi" />
 
-            <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
-                <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">E-mail</label>
-                <input type="email" name="email" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200" placeholder="seu@email.com">
-            </div>
+    <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
+        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Nome</label>
+        <input type="text" name="name" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200" placeholder="Seu nome completo">
+    </div>
 
-            <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
-                <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Mensagem</label>
-                <textarea name="message" rows="3" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200 resize-none" placeholder="Como podemos ajudar?"></textarea>
-            </div>
+    <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
+        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">E-mail</label>
+        <input type="email" name="email" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200" placeholder="seu@email.com">
+    </div>
 
-            <button type="submit" class="bg-black text-white text-[10px] uppercase tracking-[0.2em] py-4 px-10 rounded-full hover:bg-gray-800 transition-all duration-300">
-                Enviar Mensagem
-            </button>
-        </form>
+    <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
+        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Mensagem</label>
+        <textarea name="message" rows="3" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200 resize-none" placeholder="Como podemos ajudar?"></textarea>
+    </div>
+
+    <button type="submit" class="bg-black text-white text-[10px] uppercase tracking-[0.2em] py-4 px-10 hover:bg-gray-800 transition-all duration-300">
+        Enviar Mensagem
+    </button>
+</form>
 
     </div>
 </section>
