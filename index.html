@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-white text-gray-900 leading-relaxed">
@@ -28,7 +28,6 @@
 </header>
 
 <section class="relative w-full overflow-hidden bg-black">
-    
     <div class="absolute inset-0 z-0">
         <img src="seu-fundo.jpg" alt="Background" class="w-full h-full object-cover opacity-70 grayscale">
         <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60"></div>
@@ -66,43 +65,114 @@
     </main>
 </section>
 
-   <section id="projetos" class="bg-white py-24 px-6 md:px-12">
+<section id="projetos" class="bg-white pt-24 pb-12 px-6 md:px-12">
     <div class="max-w-7xl mx-auto">
         <h2 class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 mb-16 italic">Trabalhos Selecionados</h2>
         
-        <div class="grid md:grid-cols-2 gap-16 md:gap-24">
-            
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
             <div class="group cursor-pointer">
-                <div class="aspect-[16/10] overflow-hidden mb-6 bg-gray-100">
-                    <img 
-                        src="projeto1.jpg" 
-                        alt="Descrição do Projeto 1" 
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105"
-                    >
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto1.jpg" alt="Reforma Apartamento CA" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
                 </div>
-                <h3 class="text-xl md:text-2xl font-light text-black">Reforma Apartamento CA</h3>
-                <p class="text-gray-400 text-xs md:text-sm italic mt-2">Araraquara / SP</p>
+                <h3 class="text-lg font-light text-black">Reforma Apartamento JR</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Edificio Castro Alves - Araraquara / SP</p>
             </div>
 
             <div class="group cursor-pointer">
-                <div class="aspect-[16/10] overflow-hidden mb-6 bg-gray-100">
-                    <img 
-                        src="projeto2.jpg" 
-                        alt="Descrição do Projeto 2" 
-                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105"
-                    >
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto2.jpg" alt="Detalhamento Marcenaria AAM" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
                 </div>
-                <h3 class="text-xl md:text-2xl font-light text-black">Detalhamento Marcenaria AAM</h3>
-                <p class="text-gray-400 text-xs md:text-sm italic mt-2">Ribeirão Preto / SP</p>
+                <h3 class="text-lg font-light text-black">Detalhamento Marcenaria AAM</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Ribeirão Preto / SP</p>
             </div>
 
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto3.jpg" alt="Nome do Projeto 3" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Fachada RB</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Village Damha III - Araraquara / SP</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto4.jpg" alt="Nome do Projeto 4" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Projeto de Interiores MA</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Condominio Quinta das Tipuanas - Araraquara / SP</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto5.jpg" alt="Nome do Projeto 5" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Cozinha ED</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Marília / SP</p>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto6.jpg" alt="Nome do Projeto 6" class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Reforma EZ</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Araraquara / SP</p>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="contato" class="bg-white py-24 px-6 md:px-12 border-t border-gray-100">
+<section id="blog" class="bg-white pt-12 pb-12 px-6 md:px-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+            <div>
+                <h2 class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 mb-3 italic">Pensamento e Repertório</h2>
+                <h3 class="text-3xl md:text-5xl font-light tracking-tighter text-black">Journal</h3>
+            </div>
+            <a href="#" class="text-[10px] uppercase tracking-widest border-b border-black pb-1 hover:text-gray-400 hover:border-gray-400 transition">Ver todos os artigos</a>
+        </div>
+
+        <div class="grid grid-cols-1">
+            <article class="group flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-5 border-b border-gray-100 cursor-pointer">
+                <span class="text-[9px] text-gray-300 font-light tracking-widest w-20 shrink-0">OUT 2025</span>
+                <div class="flex items-center gap-4">
+                    <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">A importância da iluminação natural no design de interiores contemporâneo</h4>
+                    <div class="shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-100 group-hover:text-black transition-all transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article class="group flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-5 border-b border-gray-100 cursor-pointer">
+                <span class="text-[9px] text-gray-300 font-light tracking-widest w-20 shrink-0">SET 2025</span>
+                <div class="flex items-center gap-4">
+                    <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">Minimalismo: muito além da estética, uma estratégia de clareza</h4>
+                    <div class="shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-100 group-hover:text-black transition-all transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+
+            <article class="group flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-5 border-b border-gray-100 cursor-pointer">
+                <span class="text-[9px] text-gray-300 font-light tracking-widest w-20 shrink-0">AGO 2025</span>
+                <div class="flex items-center gap-4">
+                    <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">Arquitetura sustentável: materiais que definem o futuro das reformas</h4>
+                    <div class="shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-100 group-hover:text-black transition-all transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="bg-white pt-12 pb-24 px-6 md:px-12 border-t border-gray-100">
     <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
-        
         <div>
             <h2 class="text-3xl md:text-5xl font-light tracking-tighter mb-6 text-black">
                 Vamos iniciar uma <br>
@@ -113,64 +183,48 @@
             </p>
         </div>
 
-       <form name="contato-femgi" method="POST" data-netlify="true" action="/success/" class="space-y-8">
-    <input type="hidden" name="form-name" value="contato-femgi" />
+        <form action="https://formspree.io/f/seu_codigo_aqui" method="POST" class="space-y-8">
+            <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
+                <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Nome</label>
+                <input type="text" name="nome" required class="w-full bg-transparent outline-none text-black font-light" placeholder="Seu nome completo">
+            </div>
 
-    <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
-        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Nome</label>
-        <input type="text" name="name" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200" placeholder="Seu nome completo">
-    </div>
+            <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
+                <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">E-mail</label>
+                <input type="email" name="email" required class="w-full bg-transparent outline-none text-black font-light" placeholder="seu@email.com">
+            </div>
 
-    <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
-        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">E-mail</label>
-        <input type="email" name="email" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200" placeholder="seu@email.com">
-    </div>
+            <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
+                <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Mensagem</label>
+                <textarea name="mensagem" rows="3" required class="w-full bg-transparent outline-none text-black font-light resize-none" placeholder="Como podemos ajudar?"></textarea>
+            </div>
 
-    <div class="border-b border-gray-200 pb-2 focus-within:border-black transition">
-        <label class="block text-[10px] uppercase tracking-widest text-gray-400 mb-2">Mensagem</label>
-        <textarea name="message" rows="3" required class="w-full bg-transparent outline-none text-black font-light placeholder-gray-200 resize-none" placeholder="Como podemos ajudar?"></textarea>
-    </div>
-
-    <button type="submit" class="bg-black text-white text-[10px] uppercase tracking-[0.2em] py-4 px-10 hover:bg-gray-800 transition-all duration-300">
-        Enviar Mensagem
-    </button>
-</form>
-
+            <button type="submit" class="bg-black text-white text-[10px] uppercase tracking-[0.2em] py-4 px-10 hover:bg-gray-800 transition-all duration-300">
+                Enviar Mensagem
+            </button>
+        </form>
     </div>
 </section>
 
-    <footer class="bg-white py-12 px-6 md:px-12 border-t border-gray-50">
+<footer class="bg-white py-12 px-6 md:px-12 border-t border-gray-50">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-        
         <div class="text-[10px] uppercase tracking-widest text-gray-400 font-light order-2 md:order-1">
             © 2025 Femgi Arquitetura LTDA | Design com propósito.
         </div>
 
-        <div class="flex space-x-8 order-1 md:order-2 md:pr-44">
-            <a href="https://instagram.com/femgiarquitetura" target="_blank" class="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-black transition-colors duration-300">
-                Instagram
-            </a>
-            <a href="https://linkedin.com/in/seuusuario" target="_blank" class="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-black transition-colors duration-300">
-                LinkedIn
-            </a>
+        <div class="flex space-x-8 order-1 md:order-2 md:pr-40">
+            <a href="https://instagram.com/femgiarquitetura" target="_blank" class="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-black transition-colors duration-300">Instagram</a>
+            <a href="https://linkedin.com/in/seuusuario" target="_blank" class="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-black transition-colors duration-300">LinkedIn</a>
         </div>
-
     </div>
 </footer>
 
-    <a href="https://wa.me/5516997740203" target="_blank" 
-   class="fixed bottom-8 right-8 z-[100] group flex items-center justify-center">
-    
+<a href="https://wa.me/5516997740203" target="_blank" class="fixed bottom-8 right-8 z-[100] group flex items-center justify-center">
     <span class="absolute right-14 bg-black text-white text-[10px] uppercase tracking-widest py-2 px-4 rounded-full opacity-0 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none whitespace-nowrap font-light">
         Fale Conosco
     </span>
-
-  <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-500 ease-in-out group-hover:scale-110">
-        <img  
-                src="whatsapp.svg" 
-            alt="WhatsApp" 
-            class="w-7 h-7 md:w-12 md:h-12 object-contain transition-all duration-500 grayscale brightness-2000 invert group-hover:grayscale-0 group-hover:brightness-100 group-hover:invert-0"
-    >
+    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-500 ease-in-out group-hover:scale-110">
+        <img src="whatsapp.svg" alt="WhatsApp" class="w-7 h-7 md:w-10 md:h-10 object-contain transition-all duration-500 grayscale brightness-20000 invert group-hover:grayscale-0 group-hover:brightness-100 group-hover:invert-0">
     </div>
 </a>
 
