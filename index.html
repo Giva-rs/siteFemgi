@@ -277,6 +277,54 @@
      class="w-7 h-7 md:w-12 md:h-12 object-contain transition-all duration-500 grayscale hover:grayscale-0">
     </div>
 </a>
+<script>
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
+  if (isMobile) {
+    // 1. Configuração dos Observadores
+    const observerOptions = {
+      root: null,
+      threshold: 0.2 // Ativa assim que 20% do elemento aparece
+    };
+
+    const revealOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          
+          // Se for imagem do portfólio: Remove o cinza
+          if (entry.target.classList.contains('projeto-img')) {
+            entry.target.classList.remove('grayscale');
+          }
+          
+          // Se for título de solução: Sobe e ganha cor
+          if (entry.target.classList.contains('solucao-reveal')) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+            entry.target.style.color = "#000";
+          }
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // 2. Aplicando nas Imagens
+    document.querySelectorAll('.projeto-img').forEach(img => {
+      revealOnScroll.observe(img);
+    });
+
+    // 3. Aplicando nas Soluções (H4)
+    document.querySelectorAll('details h4').forEach(title => {
+      // Estilo inicial: Invisível, um pouco abaixo e cinza
+      title.classList.add('solucao-reveal');
+      title.style.opacity = "0";
+      title.style.transform = "translateY(20px)";
+      title.style.transition = "all 0.8s ease-out";
+      title.style.color = "#9CA3AF"; // gray-400
+      
+      revealOnScroll.observe(title);
+    });
+  }
+</script>
 </body>
 </html>
