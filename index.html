@@ -9,10 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        /* Garantir transição ultra suave para o filtro de escala de cinza */
-        .projeto-img {
-            transition: filter 1.5s ease-in-out, transform 0.7s ease-in-out !important;
-        }
     </style>
 </head>
 <body class="bg-white text-gray-900 leading-relaxed">
@@ -25,7 +21,7 @@
         
         <div class="space-x-4 md:space-x-8 text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-light">
             <a href="#projetos" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Projetos</a>
-            <a href="#solucoes" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Soluções</a>
+            <a href="#soluções" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Soluções</a>
             <a href="#contato" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Contato</a>
         </div>
     </nav>
@@ -52,16 +48,43 @@
         </a>
 
         <div class="border-t border-white/10 pt-8 mt-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-wrap items-start md:items-center gap-x-6 gap-y-4 md:gap-y-3 text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] text-gray-400 font-light">
-                <div class="flex items-center gap-2"><span>Reformas</span><span class="hidden md:inline text-white/20">•</span></div>
-                <div class="flex items-center gap-2"><span>Regularizações</span><span class="hidden md:inline text-white/20">•</span></div>
-                <div class="flex items-center gap-2"><span>Gestão de Obras</span><span class="hidden md:inline text-white/20">•</span></div>
-                <div class="flex items-center gap-2"><span>Projetos Técnicos</span><span class="hidden md:inline text-white/20">•</span></div>
-                <div class="flex items-center gap-2"><span>Projetos de Interiores</span><span class="hidden md:inline text-white/20">•</span></div>
-                <div class="flex items-center gap-2"><span>Elaboração de Planilhas de Obra PCI/PLS CAIXA</span><span class="hidden md:inline text-white/20">•</span></div>
-                <div class="flex items-center gap-2"><span>Laudos de Avaliações por Inferência Estatística</span></div>
-            </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-wrap items-start md:items-center gap-x-6 gap-y-4 md:gap-y-3 text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] text-gray-400 font-light">
+        
+        <div class="flex items-center gap-2">
+            <span>Reformas</span>
+            <span class="hidden md:inline text-white/20">•</span>
         </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Regularizações</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Gestão de Obras</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Projetos Técnicos</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Projetos de Interiores</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <span>Elaboração de Planilhas de Obra PCI/PLS CAIXA</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Laudos de Avaliações por Inferência Estatística</span>
+        </div>
+    </div>
+</div>
     </main>
 </section>
 
@@ -72,42 +95,47 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
             <div class="group cursor-pointer">
                 <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
-                    <img src="projeto1.jpg" alt="Projeto 1" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                   <img src="projeto1.jpg" alt="..." class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
                 </div>
                 <h3 class="text-lg font-light text-black">Reforma Apartamento JR</h3>
                 <p class="text-gray-400 text-[10px] italic mt-2">Edificio Castro Alves - Araraquara / SP</p>
             </div>
+
             <div class="group cursor-pointer">
                 <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
-                    <img src="projeto2.jpg" alt="Projeto 2" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                    <img src="projeto2.jpg" alt="..." class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
                 </div>
                 <h3 class="text-lg font-light text-black">Detalhamento Marcenaria AAM</h3>
                 <p class="text-gray-400 text-[10px] italic mt-2">Ribeirão Preto / SP</p>
             </div>
+
             <div class="group cursor-pointer">
                 <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
-                    <img src="projeto3.jpg" alt="Projeto 3" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                    <img src="projeto3.jpg" alt="..." class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
                 </div>
                 <h3 class="text-lg font-light text-black">Fachada RB</h3>
                 <p class="text-gray-400 text-[10px] italic mt-2">Village Damha III - Araraquara / SP</p>
             </div>
+
             <div class="group cursor-pointer">
                 <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
-                    <img src="projeto4.jpg" alt="Projeto 4" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                    <img src="projeto4.jpg" alt="..." class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
                 </div>
                 <h3 class="text-lg font-light text-black">Projeto de Interiores MA</h3>
                 <p class="text-gray-400 text-[10px] italic mt-2">Condominio Quinta das Tipuanas - Araraquara / SP</p>
             </div>
+
             <div class="group cursor-pointer">
                 <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
-                    <img src="projeto5.jpg" alt="Projeto 5" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                    <img src="projeto5.jpg" alt="..." class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
                 </div>
                 <h3 class="text-lg font-light text-black">Cozinha ED</h3>
                 <p class="text-gray-400 text-[10px] italic mt-2">Marília / SP</p>
             </div>
+
             <div class="group cursor-pointer">
                 <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
-                    <img src="projeto6.jpg" alt="Projeto 6" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                    <img src="projeto6.jpg" alt="..." class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105">
                 </div>
                 <h3 class="text-lg font-light text-black">Reforma EZ</h3>
                 <p class="text-gray-400 text-[10px] italic mt-2">Araraquara / SP</p>
@@ -116,77 +144,187 @@
     </div>
 </section>
 
-<section id="solucoes" class="bg-white pt-12 pb-12 px-6 md:px-12 border-t border-gray-100">
+<section id="soluções" class="bg-white pt-12 pb-12 px-6 md:px-12 border-t border-gray-100">
     <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-            <div>
-                <h2 class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 mb-3 italic">Expertise e Metodologia</h2>
-                <h3 class="text-3xl md:text-5xl font-light tracking-tighter text-black">Soluções</h3>
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+    <div>
+        <h2 class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 mb-3 italic">Expertise e Metodologia</h2>
+        <h3 class="text-3xl md:text-5xl font-light tracking-tighter text-black">Soluções</h3>
+    </div>
+    <a href="mailto:contato@femgi.com.br?subject=Solicitação de Contato" class="text-[10px] uppercase tracking-widest border-b border-black pb-1 hover:text-gray-400 hover:border-gray-400 transition inline-block">
+        Solicitar Consultoria
+    </a>
+</div>
+
+       <div class="grid grid-cols-1">
+    
+    <details class="group border-b border-gray-100 outline-none">
+        <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+            <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Engenharia</span>
+            
+            <div class="flex items-center gap-4">
+                <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                    Laudos de Avaliação por Inferência Estatística: Precisão e Normatização
+                </h4>
+                <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </div>
             </div>
-            <a href="mailto:contato@femgi.com.br?subject=Solicitação de Contato" class="text-[10px] uppercase tracking-widest border-b border-black pb-1 hover:text-gray-400 hover:border-gray-400 transition inline-block">
-                Solicitar Consultoria
-            </a>
+        </summary>
+        <div class="pb-8 md:pl-32 max-w-3xl">
+            <p class="text-gray-500 font-light leading-relaxed">
+                Utilizamos um método aprimorado de análise de dados de mercado e regressão para estimar o valor de uma propriedade, reduzindo a subjetividade e oferecendo maior precisão nos resultados. Entregando valores de mercado incontestáveis, essenciais para decisões estratégicas em garantias bancárias, partilhas e processos judiciais. Unimos a conformidade técnica da NBR 14653 à clareza necessária para proteger seus interesses financeiros.
+            </p>
         </div>
+    </details>
 
-        <div class="grid grid-cols-1">
-            <details class="group border-b border-gray-100 outline-none">
-                <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
-                    <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Engenharia</span>
-                    <div class="flex items-center gap-4">
-                        <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
-                            Laudos de Avaliação por Inferência Estatística: Precisão e Normatização
-                        </h4>
-                        <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </div>
-                    </div>
-                </summary>
-                <div class="pb-8 md:pl-32 max-w-3xl">
-                    <p class="text-gray-500 font-light leading-relaxed">Utilizamos um método aprimorado de análise de dados de mercado e regressão para estimar o valor de uma propriedade, reduzindo a subjetividade e oferecendo maior precisão nos resultados...</p>
+    <details class="group border-b border-gray-100 outline-none">
+        <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+            <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Financiamento</span>
+            
+            <div class="flex items-center gap-4">
+                <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                    Gestão de Planilhas CAIXA (PCI/PLS): Viabilizando seu Financiamento Habitacional
+                </h4>
+                <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                 </div>
-            </details>
-            <details class="group border-b border-gray-100 outline-none">
-                <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
-                    <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Financiamento</span>
-                    <div class="flex items-center gap-4">
-                        <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
-                            Gestão de Planilhas CAIXA (PCI/PLS): Viabilizando seu Financiamento Habitacional
-                        </h4>
-                        <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </div>
-                    </div>
-                </summary>
-                <div class="pb-8 md:pl-32 max-w-3xl">
-                    <p class="text-gray-500 font-light leading-relaxed">Somos especialistas em processos da Caixa Econômica Federal, gerimos toda a documentação técnica (PCI/PLS)...</p>
-                </div>
-            </details>
+            </div>
+        </summary>
+        <div class="pb-8 md:pl-32 max-w-3xl">
+            <p class="text-gray-500 font-light leading-relaxed">
+                Somos especialistas em processos da Caixa Econômica Federal, gerimos toda a documentação técnica (PCI/PLS) para garantir a aprovação do seu financiamento e a liberação contínua de parcelas. Com a expertise de mais de 300 serviços analisados, elaborados e entregues, nossa gestão está preparada para evitar paralisações por erros documentais, assegurando que o fluxo de caixa e o cronograma da sua construção sigam sem interrupções.
 
-            <details class="group border-b border-gray-100 outline-none">
-                <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
-                    <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Execução</span>
-                    <div class="flex items-center gap-4">
-                        <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
-                            Acompanhamento Técnico e Gestão de Obras: Projeto executado com qualidade
-                        </h4>
-                        <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                        </div>
-                    </div>
-                </summary>
-                <div class="pb-8 md:pl-32 max-w-3xl">
-                    <p class="text-gray-500 font-light leading-relaxed">Sua obra entregue exatamente como projetada, com zero estresse...</p>
-                </div>
-            </details>
+            </p>
         </div>
+    </details>
+
+    <details class="group border-b border-gray-100 outline-none">
+        <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+            <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Execução</span>
+            
+            <div class="flex items-center gap-4">
+                <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                    Acompanhamento Técnico e Gestão de Obras: projeto executado com qualidade, segurança e dentro do planejado
+                </h4>
+                <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </div>
+            </div>
+        </summary>
+        <div class="pb-8 md:pl-32 max-w-3xl">
+            <p class="text-gray-500 font-light leading-relaxed">
+                Sua obra entregue exatamente como projetada, com zero estresse. Nossa gestão técnica é focada na fidelidade absoluta ao conceito arquitetônico, aliando rigor construtivo a um controle de qualidade minucioso. Gerenciamos prazos e processos para que você desfrute da evolução do seu projeto, com a certeza de que cada detalhe seja executado com máxima perfeição e eficiência.
+            </p>
+        </div>
+    </details>
     </div>
 </section>
 
 <section id="contato" class="bg-white pt-12 pb-24 px-6 md:px-12 border-t border-gray-100">
     <div class="max-w-7xl mx-auto">
         <div class="max-w-2xl">
-            <h2 class="text-3xl md:text-5xl font-light tracking-tighter mb-8 text-black">Vamos iniciar uma <br><span class="text-gray-400">nova conversa?</span></h2>
-            <p class="text-gray-500 font-light text-base md:text-lg mb-10">Seja para um projeto novo ou apenas para trocar ideias, sinta-se à vontade para entrar em contato diretamente.</p>
+            <h2 class="text-3xl md:text-5xl font-light tracking-tighter mb-8 text-black">
+                Vamos iniciar uma <br>
+                <span class="text-gray-400">nova conversa?</span>
+            </h2>
+            <p class="text-gray-500 font-light text-base md:text-lg mb-10">
+                Seja para um projeto novo ou apenas para trocar ideias, sinta-se à vontade para entrar em contato diretamente.
+            </p>
+            
             <a href="mailto:contato@femgi.com.br?subject=Contato via Site - FEMGI Arquitetura" class="group inline-flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black group-hover:text-gray-400 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-                <span class="text-base md:text-lg font-light text-black border-b border-transparent group-hover:border-gray-400 group-hover:text-gray-400 transition-all duration-3
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black group-hover:text-gray-400 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+
+                <span class="text-base md:text-lg font-light text-black border-b border-transparent group-hover:border-gray-400 group-hover:text-gray-400 transition-all duration-300 pb-0.5">
+                    contato@femgi.com.br
+                </span>
+
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-white py-12 px-6 md:px-12 border-t border-gray-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div class="text-[10px] uppercase tracking-widest text-gray-400 font-light order-2 md:order-1">
+            © 2025 Femgi Arquitetura LTDA | Design com propósito.
+        </div>
+
+        <div class="flex space-x-8 order-1 md:order-2 md:pr-40">
+            <a href="https://instagram.com/femgiarquitetura" target="_blank" class="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-black transition-colors duration-300">Instagram</a>
+            <a href="https://linkedin.com/in/seuusuario" target="_blank" class="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-black transition-colors duration-300">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/5516997740203" target="_blank" class="fixed bottom-8 right-8 z-[100] group flex items-center justify-center">
+    <span class="absolute right-14 bg-black text-white text-[10px] uppercase tracking-widest py-2 px-4 rounded-full opacity-0 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none whitespace-nowrap font-light">
+        Fale Conosco
+    </span>
+    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-500 ease-in-out group-hover:scale-110">
+        <img src="whatsapp.svg" alt="WhatsApp" 
+     class="w-7 h-7 md:w-12 md:h-12 object-contain transition-all duration-500 grayscale hover:grayscale-0">
+    </div>
+</a>
+<script>
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  if (isMobile) {
+    // 1. Configuração dos Observadores
+    const observerOptions = {
+      root: null,
+      threshold: 0.2 // Ativa assim que 20% do elemento aparece
+    };
+
+    const revealOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          
+          // Se for imagem do portfólio: Remove o cinza
+          if (entry.target.classList.contains('projeto-img')) {
+            entry.target.classList.remove('grayscale');
+          }
+          
+          // Se for título de solução: Sobe e ganha cor
+          if (entry.target.classList.contains('solucao-reveal')) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+            entry.target.style.color = "#000";
+          }
+
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // 2. Aplicando nas Imagens
+    document.querySelectorAll('.projeto-img').forEach(img => {
+      revealOnScroll.observe(img);
+    });
+
+    // 3. Aplicando nas Soluções (H4)
+    document.querySelectorAll('details h4').forEach(title => {
+      // Estilo inicial: Invisível, um pouco abaixo e cinza
+      title.classList.add('solucao-reveal');
+      title.style.opacity = "0";
+      title.style.transform = "translateY(20px)";
+      title.style.transition = "all 0.8s ease-out";
+      title.style.color = "#9CA3AF"; // gray-400
+      
+      revealOnScroll.observe(title);
+    });
+  }
+</script>
+</body>
+</html>
