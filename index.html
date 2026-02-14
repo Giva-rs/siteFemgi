@@ -1,46 +1,192 @@
-<script>
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-  if (isMobile) {
-    const observerOptions = {
-      root: null,
-      threshold: 0.2 
-    };
-
-    const revealOnScroll = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          
-          if (entry.target.classList.contains('projeto-img')) {
-            entry.target.classList.remove('grayscale');
-          }
-          
-          if (entry.target.classList.contains('solucao-reveal')) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-            entry.target.style.color = "#000";
-          }
-
-          // Corrigido para o nome correto da constante
-          revealOnScroll.unobserve(entry.target);
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEMGI Arquitetura</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        /* Garantir transição ultra suave para o filtro de escala de cinza */
+        .projeto-img {
+            transition: filter 1.5s ease-in-out, transform 0.7s ease-in-out !important;
         }
-      });
-    }, observerOptions);
+    </style>
+</head>
+<body class="bg-white text-gray-900 leading-relaxed">
 
-    // 2. Aplicando nas Imagens (Certifique-se de adicionar a classe projeto-img no HTML)
-    document.querySelectorAll('.projeto-img').forEach(img => {
-      revealOnScroll.observe(img);
-    });
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 py-3">
+        <a href="/" class="block group">
+            <img src="logo.svg" alt="Logo Femgi" class="h-6 md:h-8 w-auto object-contain transition-all duration-500 opacity-100 group-hover:opacity-40">
+        </a>
+        
+        <div class="space-x-4 md:space-x-8 text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-light">
+            <a href="#projetos" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Projetos</a>
+            <a href="#solucoes" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Soluções</a>
+            <a href="#contato" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Contato</a>
+        </div>
+    </nav>
+</header>
 
-    // 3. Aplicando nas Soluções (H4)
-    document.querySelectorAll('details h4').forEach(title => {
-      title.classList.add('solucao-reveal');
-      title.style.opacity = "0";
-      title.style.transform = "translateY(20px)";
-      title.style.transition = "all 0.8s ease-out";
-      title.style.color = "#9CA3AF"; 
-      
-      revealOnScroll.observe(title);
-    });
-  }
-</script>
+<section class="relative w-full overflow-hidden bg-black">
+    <div class="absolute inset-0 z-0">
+        <img src="seu-fundo.jpg" alt="Background" class="w-full h-full object-cover opacity-70 grayscale">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60"></div>
+    </div>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 md:py-40">
+        <h1 class="text-5xl md:text-8xl font-light tracking-tighter leading-none mb-12 text-white -ml-1 md:-ml-2">
+            Projetos que <br> 
+            <span class="text-gray-400">conectam ideias.</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-300 max-w-xl mb-12 font-light">
+            Criamos experiências focadas em clareza, estética contemporânea e resultados reais.
+        </p>
+        
+        <a href="#projetos" class="inline-block border-b border-white pb-2 text-[10px] md:text-xs uppercase tracking-widest text-white hover:text-gray-400 hover:border-gray-400 transition mb-24">
+            Ver Portfólio
+        </a>
+
+        <div class="border-t border-white/10 pt-8 mt-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-wrap items-start md:items-center gap-x-6 gap-y-4 md:gap-y-3 text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] text-gray-400 font-light">
+                <div class="flex items-center gap-2"><span>Reformas</span><span class="hidden md:inline text-white/20">•</span></div>
+                <div class="flex items-center gap-2"><span>Regularizações</span><span class="hidden md:inline text-white/20">•</span></div>
+                <div class="flex items-center gap-2"><span>Gestão de Obras</span><span class="hidden md:inline text-white/20">•</span></div>
+                <div class="flex items-center gap-2"><span>Projetos Técnicos</span><span class="hidden md:inline text-white/20">•</span></div>
+                <div class="flex items-center gap-2"><span>Projetos de Interiores</span><span class="hidden md:inline text-white/20">•</span></div>
+                <div class="flex items-center gap-2"><span>Elaboração de Planilhas de Obra PCI/PLS CAIXA</span><span class="hidden md:inline text-white/20">•</span></div>
+                <div class="flex items-center gap-2"><span>Laudos de Avaliações por Inferência Estatística</span></div>
+            </div>
+        </div>
+    </main>
+</section>
+
+<section id="projetos" class="bg-white pt-24 pb-12 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 mb-16 italic">Trabalhos Selecionados</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto1.jpg" alt="Projeto 1" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Reforma Apartamento JR</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Edificio Castro Alves - Araraquara / SP</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto2.jpg" alt="Projeto 2" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Detalhamento Marcenaria AAM</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Ribeirão Preto / SP</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto3.jpg" alt="Projeto 3" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Fachada RB</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Village Damha III - Araraquara / SP</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto4.jpg" alt="Projeto 4" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Projeto de Interiores MA</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Condominio Quinta das Tipuanas - Araraquara / SP</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto5.jpg" alt="Projeto 5" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Cozinha ED</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Marília / SP</p>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-[4/5] overflow-hidden mb-6 bg-gray-100">
+                    <img src="projeto6.jpg" alt="Projeto 6" class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 group-hover:scale-105">
+                </div>
+                <h3 class="text-lg font-light text-black">Reforma EZ</h3>
+                <p class="text-gray-400 text-[10px] italic mt-2">Araraquara / SP</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="solucoes" class="bg-white pt-12 pb-12 px-6 md:px-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+            <div>
+                <h2 class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 mb-3 italic">Expertise e Metodologia</h2>
+                <h3 class="text-3xl md:text-5xl font-light tracking-tighter text-black">Soluções</h3>
+            </div>
+            <a href="mailto:contato@femgi.com.br?subject=Solicitação de Contato" class="text-[10px] uppercase tracking-widest border-b border-black pb-1 hover:text-gray-400 hover:border-gray-400 transition inline-block">
+                Solicitar Consultoria
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1">
+            <details class="group border-b border-gray-100 outline-none">
+                <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+                    <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Engenharia</span>
+                    <div class="flex items-center gap-4">
+                        <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                            Laudos de Avaliação por Inferência Estatística: Precisão e Normatização
+                        </h4>
+                        <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                </summary>
+                <div class="pb-8 md:pl-32 max-w-3xl">
+                    <p class="text-gray-500 font-light leading-relaxed">Utilizamos um método aprimorado de análise de dados de mercado e regressão para estimar o valor de uma propriedade, reduzindo a subjetividade e oferecendo maior precisão nos resultados...</p>
+                </div>
+            </details>
+            <details class="group border-b border-gray-100 outline-none">
+                <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+                    <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Financiamento</span>
+                    <div class="flex items-center gap-4">
+                        <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                            Gestão de Planilhas CAIXA (PCI/PLS): Viabilizando seu Financiamento Habitacional
+                        </h4>
+                        <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                </summary>
+                <div class="pb-8 md:pl-32 max-w-3xl">
+                    <p class="text-gray-500 font-light leading-relaxed">Somos especialistas em processos da Caixa Econômica Federal, gerimos toda a documentação técnica (PCI/PLS)...</p>
+                </div>
+            </details>
+
+            <details class="group border-b border-gray-100 outline-none">
+                <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+                    <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Execução</span>
+                    <div class="flex items-center gap-4">
+                        <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                            Acompanhamento Técnico e Gestão de Obras: Projeto executado com qualidade
+                        </h4>
+                        <div class="shrink-0 transition-all duration-300 transform group-open:rotate-90 text-gray-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                        </div>
+                    </div>
+                </summary>
+                <div class="pb-8 md:pl-32 max-w-3xl">
+                    <p class="text-gray-500 font-light leading-relaxed">Sua obra entregue exatamente como projetada, com zero estresse...</p>
+                </div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="bg-white pt-12 pb-24 px-6 md:px-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl">
+            <h2 class="text-3xl md:text-5xl font-light tracking-tighter mb-8 text-black">Vamos iniciar uma <br><span class="text-gray-400">nova conversa?</span></h2>
+            <p class="text-gray-500 font-light text-base md:text-lg mb-10">Seja para um projeto novo ou apenas para trocar ideias, sinta-se à vontade para entrar em contato diretamente.</p>
+            <a href="mailto:contato@femgi.com.br?subject=Contato via Site - FEMGI Arquitetura" class="group inline-flex items-center gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black group-hover:text-gray-400 transition-colors duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                <span class="text-base md:text-lg font-light text-black border-b border-transparent group-hover:border-gray-400 group-hover:text-gray-400 transition-all duration-3
