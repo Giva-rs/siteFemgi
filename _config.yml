@@ -1,0 +1,10 @@
+# Configurações de Cache e Performance
+include: [".htaccess", "_headers"]
+keep_files: [".git", ".svn"]
+markdown: kramdown
+highlighter: rouge
+
+# Forçar cabeçalhos de compressão e cache
+webrick:
+  headers:
+    "Cache-Control": "max-age=31536000, public"
