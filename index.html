@@ -262,6 +262,7 @@
                     Acompanhamento Técnico e Gestão de Obras: projeto executado com qualidade, segurança e dentro do planejado
                 </h4>
                 <div class="icon-toggle shrink-0 transition-all duration-300"></div>
+                </div>
             </div>
         </summary>
         <div class="pb-8 md:pl-32 max-w-3xl">
@@ -1861,12 +1862,13 @@
       --tw-scale-y: 1;
       --tw-scale-z: 1;
     }
-
+  }
+  /* Remove a seta padrão do navegador */
 summary::-webkit-details-marker {
     display: none;
 }
 
-
+/* Define o estilo do ícone baseado no estado do details */
 .icon-toggle::before {
     content: '+';
     font-family: Arial, sans-serif; /* Garante que o símbolo apareça */
