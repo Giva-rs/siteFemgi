@@ -1,589 +1,2030 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FEMGI Arquitetura – Regularização de Imóveis em Ribeirão Preto</title>
-<meta name="description" content="Regularização de imóveis e obras em Ribeirão Preto, SP. Alvará, Habite-se, CND, Retificação de Área e Averbação. Análise gratuita. Fale com a FEMGI Arquitetura.">
-<meta name="robots" content="index, follow">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FEMGI Arquitetura – Regularização de Imóveis em Ribeirão Preto">
-<meta property="og:description" content="Regularização de imóveis e obras em Ribeirão Preto, SP. Alvará, Habite-se, CND, Retificação de Área e Averbação. Análise gratuita.">
-<meta property="og:image" content="https://femgi.com.br/arquiteto-ribeirao-preto-regularizacao-obras.webp">
-<meta property="og:url" content="https://femgi.com.br/">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="FEMGI Arquitetura">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FEMGI Arquitetura – Regularização de Imóveis em Ribeirão Preto">
-<meta name="twitter:description" content="Regularização de imóveis e obras em Ribeirão Preto, SP. Alvará, Habite-se, CND, Averbação. Análise gratuita.">
-<link rel="icon" type="image/svg+xml" href="femgi-arquitetura-favicon.svg">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --sand:#F7F4EF;--olive:#D4DCD2;--olive-dark:#9BAD96;
-  --green-wa:#25D366;--graphite:#2B2D2F;--graphite-2:#3E4144;
-  --mid:#6B7280;--white:#FFFFFF;
-  --border:rgba(43,45,47,0.10);--border-md:rgba(43,45,47,0.18);
-  --shadow-sm:0 2px 12px rgba(43,45,47,0.07);
-  --shadow-md:0 6px 32px rgba(43,45,47,0.11);
-  --radius:10px;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Open Sans',sans-serif;background:var(--sand);color:var(--graphite);line-height:1.65;font-size:16px}
-.container{max-width:1200px;margin:0 auto;padding:0 5%}
-.section-label{font-size:.75rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:.7rem;display:block}
-.section-title{font-family:'Montserrat',sans-serif;font-size:clamp(1.6rem,3.5vw,2.5rem);font-weight:800;text-transform:uppercase;color:var(--graphite);line-height:1.15;margin-bottom:1.2rem}
-.section-text{color:var(--mid);font-size:1rem;font-weight:300;line-height:1.8;margin-bottom:1.1rem}
-
-/* BUTTONS */
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--green-wa);color:#fff!important;font-family:'Open Sans',sans-serif;font-weight:700;font-size:.92rem;padding:.8rem 1.8rem;border-radius:50px;text-decoration:none;transition:transform .3s,box-shadow .3s;border:none;cursor:pointer;white-space:nowrap}
-.btn-primary:hover{transform:scale(1.05) translateY(-3px);box-shadow:0 8px 25px rgba(37,211,102,.4)}
-.btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--graphite);font-family:'Open Sans',sans-serif;font-weight:500;font-size:.9rem;padding:.8rem 1.6rem;border-radius:50px;text-decoration:none;border:1.5px solid var(--border-md);transition:border-color .2s,background .2s}
-.btn-outline:hover{border-color:var(--graphite);background:rgba(43,45,47,.04)}
-
-/* TOPBAR */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:101;background:var(--green-wa);height:40px;display:flex;align-items:center;transition:transform .3s ease;white-space:nowrap}
-.topbar-inner{max-width:none;margin:0;padding:0 5%;width:100%;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:center}
-.topbar-label{font-size:.72rem;font-weight:700;color:#fff;text-transform:none;letter-spacing:0}
-.topbar-label-title{text-transform:uppercase;letter-spacing:.12em}
-.topbar-center{display:flex;align-items:center;justify-content:center;gap:1rem;font-size:.75rem;font-weight:600;color:#fff;white-space:nowrap}
-.topbar-hours{display:flex;align-items:center;gap:5px;font-size:.75rem;font-weight:600;color:#fff;white-space:nowrap}
-.topbar-hours i{font-size:.8rem}
-.topbar-sep{color:#fff;opacity:.35;font-size:.65rem}
-.topbar-center i{font-size:.8rem}
-.topbar-contacts{display:flex;align-items:center;justify-content:flex-end;gap:.9rem}
-.topbar-contact{display:flex;align-items:center;gap:5px;color:#fff;text-decoration:none;font-size:.75rem;font-weight:600;white-space:nowrap;transition:opacity .2s}
-.topbar-contact:hover{opacity:.65}
-.topbar-contact i{font-size:.82rem}
-.topbar-divider{color:#fff;opacity:.35;font-size:.65rem;line-height:1}
-@media(max-width:768px){.topbar{display:none}}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,244,239,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:68px;transition:box-shadow .3s,transform .4s ease;transform:translateY(-100%)}
-nav.scrolled{box-shadow:var(--shadow-sm)}
-nav>a{display:flex;align-items:center;padding:9px 0;line-height:0}
-.nav-logo-text{font-family:'Montserrat',sans-serif;font-size:1.2rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--graphite);text-decoration:none}
-.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
-.nav-links a{color:var(--mid);text-decoration:none;font-size:.88rem;font-weight:400;transition:color .2s}
-.nav-links a:hover{color:var(--graphite)}
-
-/* HERO */
-#home{min-height:100vh;background:url('arquiteto-ribeirão-preto-regularizacao-obras.webp') left center/cover no-repeat;position:relative;display:flex;align-items:center;justify-content:flex-end;padding:140px 5% 80px}
-.hero-content{position:relative;z-index:1;max-width:640px;animation:fadeUp .9s ease both;text-align:right}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(247,244,239,.1);border:1px solid rgba(247,244,239,.22);color:rgba(247,244,239,.8);font-size:.72rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:.35rem 1rem;border-radius:50px;margin-bottom:1.6rem}
-.hero-content h1{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,5vw,3.2rem);color:var(--white);line-height:1.1;margin-bottom:1.3rem;font-weight:800;text-transform:uppercase}
-.hero-content p{color:rgba(247,244,239,.72);font-size:1rem;font-weight:400;margin-bottom:2.2rem;line-height:1.8;max-width:540px;margin-left:auto}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:flex-end}
-.btn-hero-wa{background:var(--green-wa)!important;color:#fff!important}
-.btn-hero-outline{background:rgba(247,244,239,.08)!important;color:var(--white)!important;border-color:rgba(247,244,239,.3)!important}
-.btn-hero-outline:hover{background:rgba(247,244,239,.16)!important;border-color:rgba(247,244,239,.55)!important}
-.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2rem;border-top:1px solid rgba(247,244,239,.14);flex-wrap:wrap}
-.stat-item strong{display:block;font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:800;color:var(--white);text-transform:uppercase}
-.stat-item span{font-size:.77rem;color:rgba(247,244,239,.45);letter-spacing:.04em}
-
-/* PROBLEMA */
-#problema{background:var(--white)}
-.problema-inner{display:grid;grid-template-columns:1fr 1fr}
-.problema-left{padding:96px 5%;position:sticky;top:68px;align-self:stretch;display:flex;flex-direction:column;justify-content:center;background:var(--sand);border-right:1px solid var(--border)}
-.problema-right{padding:96px 5%;display:flex;flex-direction:column;gap:1.4rem;background:var(--white)}
-.prob-card{background:var(--sand);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem 1.6rem;display:flex;gap:1rem;align-items:flex-start;transition:box-shadow .25s,transform .25s}
-.prob-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
-.prob-icon{flex-shrink:0;width:44px;height:44px;background:var(--olive);border-radius:10px;display:flex;align-items:center;justify-content:center}
-.prob-icon svg{width:22px;height:22px;stroke:var(--graphite-2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.prob-card h3{font-size:.98rem;font-weight:600;color:var(--graphite);margin-bottom:.3rem}
-.prob-card p{font-size:.87rem;color:var(--mid);font-weight:300;line-height:1.65}
-
-/* BENEFICIOS */
-#beneficios{padding:96px 0;background:linear-gradient(rgba(43,45,47,.88),rgba(43,45,47,.88)),url('arquiteto-ribeirão-preto-projeto-regularizacao-obras.webp') center center/cover no-repeat;position:relative;overflow:hidden}
-#beneficios::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;border:1px solid rgba(212,220,210,.09);pointer-events:none}
-#beneficios::after{content:'';position:absolute;top:-40px;right:-40px;width:320px;height:320px;border-radius:50%;border:1px solid rgba(212,220,210,.06);pointer-events:none}
-#beneficios .section-label{color:var(--olive)}
-#beneficios .section-title{color:var(--white);max-width:520px}
-.beneficios-list{list-style:none;max-width:620px;margin-top:2.2rem}
-.beneficio-item{display:flex;gap:1.2rem;align-items:flex-start;padding:1.6rem 0;border-bottom:1px solid rgba(212,220,210,.1)}
-.beneficio-item:first-child{padding-top:0}
-.beneficio-item:last-child{border-bottom:none}
-.ben-num{flex-shrink:0;width:38px;height:38px;border:1px solid var(--olive);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:.9rem;color:var(--olive);font-weight:800}
-.beneficio-item h3{font-size:1rem;font-weight:600;color:var(--white);margin-bottom:.3rem}
-.beneficio-item p{font-size:.88rem;color:rgba(212,220,210,.6);font-weight:300;line-height:1.65}
-
-/* SERVICOS */
-#servicos{padding:96px 0;background:var(--sand)}
-.cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:3rem}
-.svc-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:1.7rem 1.5rem;transition:box-shadow .25s,transform .25s;position:relative;overflow:hidden;display:flex;flex-direction:column}
-.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--olive-dark);transform:scaleX(0);transform-origin:left;transition:transform .3s}
-.svc-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
-.svc-card:hover::after{transform:scaleX(1)}
-.svc-card.highlight{background:var(--olive);border-color:rgba(43,45,47,.12)}
-.svc-card.highlight h3{color:var(--graphite)}
-.svc-card.highlight p{color:var(--graphite-2)}
-.svc-icon{width:46px;height:46px;background:var(--sand);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;flex-shrink:0}
-.svc-card.highlight .svc-icon{background:rgba(43,45,47,.1)}
-.svc-icon svg{width:23px;height:23px;stroke:var(--graphite-2);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.svc-card h3{font-family:'Montserrat',sans-serif;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--graphite);margin-bottom:.45rem;line-height:1.3}
-.svc-card p{font-size:.83rem;color:var(--mid);font-weight:300;line-height:1.65;flex:1}
-.svc-card .btn-primary{margin-top:1.1rem;font-size:.82rem;padding:.6rem 1.1rem;align-self:flex-start}
-
-/* FAQ */
-#faq{padding:96px 0;background:var(--white)}
-.faq-list{margin-top:2.8rem}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-item:first-child{border-top:1px solid var(--border)}
-.faq-btn{width:100%;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:1.35rem 0;gap:1rem;text-align:left;font-family:'Open Sans',sans-serif}
-.faq-question{font-size:1rem;font-weight:500;color:var(--graphite);line-height:1.4}
-.faq-icon{flex-shrink:0;width:28px;height:28px;border:1px solid var(--border-md);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .25s,border-color .25s}
-.faq-icon svg{width:14px;height:14px;stroke:var(--graphite);fill:none;stroke-width:2.5;transition:transform .3s}
-.faq-item.open .faq-icon{background:var(--graphite);border-color:var(--graphite)}
-.faq-item.open .faq-icon svg{stroke:var(--white);transform:rotate(45deg)}
-.faq-answer{overflow:hidden;max-height:0;transition:max-height .38s ease,padding .3s;font-size:.93rem;color:var(--mid);font-weight:300;line-height:1.78;padding:0}
-.faq-item.open .faq-answer{max-height:320px;padding-bottom:1.4rem}
-
-/* CTA */
-#cta{padding:96px 0;background:var(--graphite) url('arquiteto-ribeirão-preto-regularizacao-obras-projetos.webp') center center/cover no-repeat;text-align:center;position:relative;overflow:hidden}
-#cta::after{content:'';position:absolute;inset:0;background:rgba(43,45,47,.82);z-index:0}
-#cta .section-label{color:var(--olive)}
-#cta .section-title{color:var(--white);max-width:640px;margin:0 auto 1rem}
-#cta .section-text{color:rgba(212,220,210,.55);max-width:520px;margin:0 auto 2.4rem}
-.cta-badges{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:2rem}
-.cta-badge{display:flex;align-items:center;gap:6px;color:rgba(212,220,210,.45);font-size:.82rem}
-.cta-badge svg{width:15px;height:15px;stroke:var(--olive-dark);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
-
-/* FOOTER */
-footer{background:#1A1C1E;border-top:1px solid rgba(255,255,255,.05);padding:3rem 5% 2rem}
-.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1.5fr 1fr;gap:4rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
-.footer-logo-text{font-family:'Montserrat',sans-serif;font-size:1.1rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--white);display:block;margin-bottom:.35rem}
-.footer-slogan{font-size:.82rem;color:rgba(255,255,255,.3);font-style:italic;margin-top:2px;display:block}
-.footer-col{display:flex;flex-direction:column;align-items:flex-start}
-.footer-col h4{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:1rem}
-.footer-services{color:rgba(255,255,255,.45);font-size:.87rem;font-weight:300;line-height:1.9;text-align:justify}
-.footer-col ul{list-style:none}
-.footer-col ul li{margin-bottom:.5rem}
-.footer-col ul li a{color:rgba(255,255,255,.45);text-decoration:none;font-size:.87rem;font-weight:300;transition:color .2s}
-.footer-col ul li a:hover{color:var(--white)}
-.footer-brand{display:flex;flex-direction:column;align-items:flex-start}
-.footer-location{font-size:.82rem;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:6px;margin-top:.6rem}
-.footer-location i{font-size:.78rem}
-.footer-social{display:flex;gap:12px;margin-top:1.3rem}
-.social-icon{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.1);display:flex;justify-content:center;align-items:center;font-size:1rem;color:rgba(255,255,255,.5);transition:.3s;text-decoration:none}
-.social-icon:hover{border-color:rgba(255,255,255,.3)}
-.social-icon.instagram:hover i{background:radial-gradient(circle at 30% 107%,#fdf497 0%,#fd5949 45%,#d6249f 60%,#285aeb 90%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.social-icon.facebook:hover i{color:#1877F2}
-.social-icon.whatsapp:hover i{color:#25D366}
-.social-icon.email:hover i{background:radial-gradient(circle at 30% 107%,#e0cecc 0%,#bd7a73 45%,#e26456 60%,#ff432e 90%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.social-icon.phone:hover i{background:radial-gradient(circle at 30% 107%,#bccf02 0%,#d9ff03 45%,#24d633 60%,#28ebeb 90%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.footer-bottom{max-width:1200px;margin:0 auto;padding-top:1.8rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.footer-bottom p{font-size:.77rem;color:rgba(255,255,255,.22)}
-
-/* FLOAT WA */
-.whatsapp-float{
-  position:fixed;bottom:30px;right:30px;
-  width:62px;height:62px;
-  display:flex;align-items:center;justify-content:center;
-  z-index:2000;text-decoration:none;
-  background:none;
-  transition:transform .3s cubic-bezier(.34,1.56,.64,1);
-}
-.whatsapp-float img{
-  width:62px;height:62px;
-  display:block;
-  position:relative;
-  z-index:1;
-  transition:transform .3s cubic-bezier(.34,1.56,.64,1);
-}
-/* anel circular — pulse + hover, nunca toca na imagem */
-.whatsapp-float .wa-ring{
-  position:absolute;
-  inset:0;
-  border-radius:50%;
-  background:transparent;
-  border:2.5px solid transparent;
-  pointer-events:none;
-  animation:pulse-ring 2s infinite;
-}
-/* tooltip */
-.whatsapp-float::before{
-  content:'Fale conosco';
-  position:absolute;
-  right:72px;
-  background:#2B2D2F;
-  color:#fff;
-  font-family:'Open Sans',sans-serif;
-  font-size:.75rem;
-  font-weight:600;
-  padding:.35rem .8rem;
-  border-radius:20px;
-  white-space:nowrap;
-  opacity:0;
-  transform:translateX(8px);
-  transition:opacity .25s, transform .25s;
-  pointer-events:none;
-  z-index:2;
-}
-.whatsapp-float:hover{
-  transform:scale(1.1) translateY(-3px);
-}
-.whatsapp-float:hover img{
-  transform:rotate(-8deg) scale(1.05);
-}
-.whatsapp-float:hover .wa-ring{
-  animation:none;
-  border-color:rgba(37,211,102,.8);
-  box-shadow:0 0 0 6px rgba(37,211,102,.18);
-}
-.whatsapp-float:hover::before{opacity:1;transform:translateX(0)}
-@keyframes pulse-ring{
-  0%  {box-shadow:0 0 0 0   rgba(37,211,102,.7);border-color:rgba(37,211,102,.5)}
-  70% {box-shadow:0 0 0 12px rgba(37,211,102,0); border-color:rgba(37,211,102,0)}
-  100%{box-shadow:0 0 0 0   rgba(37,211,102,0); border-color:rgba(37,211,102,0)}
-}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-
-/* HAMBURGER */
-.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px;flex-direction:column;gap:5px;align-items:center;justify-content:center}
-.nav-hamburger span{display:block;width:22px;height:2px;background:var(--graphite);border-radius:2px;transition:transform .3s,opacity .3s}
-
-/* RESPONSIVE */
-@media(max-width:1024px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:768px){
-  .nav-hamburger{display:flex}
-  .nav-links{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(247,244,239,.98);backdrop-filter:blur(12px);flex-direction:column;gap:0;padding:1.2rem 5% 1.5rem;border-bottom:1px solid var(--border);box-shadow:var(--shadow-md);z-index:99}
-  .nav-links.open{display:flex}
-  .nav-links li{width:100%}
-  .nav-links li a:not(.btn-primary){display:block;padding:.9rem 0;font-size:.95rem;border-bottom:1px solid var(--border);color:var(--graphite);font-weight:400}
-  .nav-links .btn-primary{margin-top:.8rem;justify-content:center;width:100%}
-  nav.nav-open .nav-hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  nav.nav-open .nav-hamburger span:nth-child(2){opacity:0}
-  nav.nav-open .nav-hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .problema-inner{grid-template-columns:1fr}
-  .problema-left{position:relative;top:auto;height:auto;padding:64px 5%}
-  .problema-right{padding:32px 5% 64px}
-  .footer-inner{grid-template-columns:1fr}
-  .footer-bottom{flex-direction:column;align-items:flex-start}
-  .hero-stats{gap:1.5rem}
-}
-@media(max-width:480px){.cards-grid{grid-template-columns:1fr}}
-</style>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"FEMGI Arquitetura","description":"Regularização de imóveis e obras em Ribeirão Preto, SP. Alvará, Habite-se, CND, Retificação de Área, Averbação.","url":"https://femgi.com.br/","telephone":"+5516997354455","email":"contato@femgi.com.br","image":"https://femgi.com.br/arquiteto-ribeirao-preto-regularizacao-obras.jpg","address":{"@type":"PostalAddress","addressLocality":"Ribeirão Preto","addressRegion":"SP","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:30","closes":"17:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"12:00"}],"sameAs":["https://instagram.com/femgiarquitetura","https://facebook.com/femgiarquitetura"]}
+    <link rel="preload" as="image" href="projeto-arquitetura-ribeirao-preto.webp" fetchpriority="high">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEMGI Arquitetura | Arquiteto em Ribeirão Preto</title>
+    <meta name="description" content="FEMGI Arquitetura: Projetos de arquitetura, regularização de edificações, reformas e gestão de obras em Ribeirão Preto e região. Projetos contemporâneos com precisão técnica.">
+    <meta name="keywords" content="Arquitetura, Ribeirão Preto, Reforma, Laudo de Avaliação, Projetos Arquitetônicos, Regularizações">
+    <link rel="canonical" href="https://www.femgi.com.br/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="icon" type="image/svg+xml" href="femgi-arquitetura-favicon.svg">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .projeto-img { transition: filter 1.5s ease-in-out, transform 0.7s ease-in-out !important; }
+    </style>
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "name": "FEMGI Arquitetura",
+      "legalName": "Femgi Arquitetura LTDA",
+      "description": "Escritório de arquitetura especializado em projetos arquitetônicos, regularização de edificações, reformas, gestão de obras, projetos de interiores, laudos de avaliação por inferência estatística e elaboração de planilhas CAIXA (PCI/PLS) em Ribeirão Preto e região.",
+      "url": "https://www.femgi.com.br",
+      "logo": "https://femgi.com.br/logo.svg",
+      "image": "https://femgi.com.br/projeto-arquitetura-ribeirao-preto.webp",
+      "telephone": "+55-16-99735-4455",
+      "email": "contato@femgi.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Romeu Ceoloto, 588 - Campos Elíseos",
+        "addressLocality": "Ribeirão Preto",
+        "addressRegion": "SP",
+        "postalCode": "14080-640",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-21.1945",
+        "longitude": "-47.8156"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Ribeirão Preto", "addressRegion": "SP", "addressCountry": "BR" },
+        { "@type": "City", "name": "Sertãozinho", "addressRegion": "SP", "addressCountry": "BR" },
+        { "@type": "City", "name": "Dumont", "addressRegion": "SP", "postalCode": "14120-000", "addressCountry": "BR" },
+        { "@type": "City", "name": "Serrana", "addressRegion": "SP", "postalCode": "14150-000", "addressCountry": "BR" },
+        { "@type": "City", "name": "Cravinhos", "addressRegion": "SP", "postalCode": "14140-000", "addressCountry": "BR" },
+        { "@type": "City", "name": "Pradópolis", "addressRegion": "SP", "postalCode": "14850-000", "addressCountry": "BR" },
+        { "@type": "City", "name": "São Simão", "addressRegion": "SP", "postalCode": "14200-000", "addressCountry": "BR" },
+        { "@type": "City", "name": "Jardinópolis", "addressRegion": "SP", "postalCode": "14680-000", "addressCountry": "BR" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Arquitetura",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Projetos Arquitetônicos",
+              "description": "Desenvolvimento de projetos arquitetônicos residenciais e comerciais com estética contemporânea e precisão técnica."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Regularização de Edificações",
+              "description": "Regularização de imóveis junto à prefeitura e demais órgãos competentes em Ribeirão Preto e região."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reformas",
+              "description": "Projetos e acompanhamento técnico de reformas residenciais e comerciais."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gestão de Obras",
+              "description": "Acompanhamento técnico e gestão completa de obras, garantindo fidelidade ao projeto, qualidade e cumprimento de prazos."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Projetos de Interiores",
+              "description": "Projetos de design de interiores de alto padrão com foco em estética contemporânea e funcionalidade."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Laudos de Avaliação por Inferência Estatística",
+              "description": "Elaboração de laudos de avaliação imobiliária conforme NBR 14653, com método estatístico de alta precisão para garantias bancárias, partilhas e processos judiciais."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Planilhas CAIXA PCI/PLS",
+              "description": "Elaboração e gestão de planilhas PCI/PLS da Caixa Econômica Federal para financiamentos habitacionais."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Projetos Técnicos de Marcenaria",
+              "description": "Projetos técnicos detalhados de marcenaria para residências e ambientes comerciais."
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://instagram.com/femgiarquitetura"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-16-99735-4455",
+        "contactType": "customer service",
+        "availableLanguage": "Portuguese"
+      },
+      "priceRange": "$$",
+      "currenciesAccepted": "BRL",
+      "paymentAccepted": "Transferência bancária, PIX",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ]
+    }
 </script>
 </head>
-<body>
+<body class="bg-white text-gray-900 leading-relaxed">
 
-<!-- TOPBAR -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <!-- Esquerda: ATENDIMENTO + horário -->
-    <span class="topbar-label"><span class="topbar-label-title">Atendimento:</span> <i class="fa-regular fa-clock"></i> Seg – Sex: 8:30 às 17:30h &nbsp;|&nbsp; Sáb: 9:00 às 12:00h</span>
-    <!-- Centro: localização -->
-    <div class="topbar-center">
-      <span><i class="fa-solid fa-location-dot"></i> Ribeirão Preto, SP</span>
+<header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 py-3">
+        <a href="/" class="block group outline-none focus:outline-none focus:ring-0 focus:border-transparent focus-visible:outline-none" style="-webkit-tap-highlight-color: transparent;">
+            <img src="logo.svg" alt="Logo Femgi" width="120" height="32" class="h-6 md:h-8 w-auto object-contain transition-all duration-500 opacity-100 group-hover:opacity-40 outline-none focus:outline-none">
+        </a>
+        
+        <div class="space-x-4 md:space-x-8 text-[10px] md:text-xs uppercase tracking-widest text-gray-500 font-light">
+            <a href="#projetos" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Projetos</a>
+            <a href="#solucoes" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Soluções</a>
+            <a href="#contato" class="hover:text-black transition underline underline-offset-4 decoration-gray-300 hover:decoration-black">Contato</a>
+        </div>
+    </nav>
+</header>
+
+<section class="relative w-full min-h-screen flex flex-col justify-end pb-20 md:pb-32 px-6 md:px-12 overflow-hidden bg-black">
+    
+    <img 
+        src="projeto-arquitetura-ribeirao-preto.webp" 
+        alt="Projetos técnicos e regularizações em Ribeirão Preto - FEMGI" 
+        width="544" 
+        height="816" 
+        fetchpriority="high"
+        class="absolute inset-0 w-full h-full object-cover opacity-60 grayscale"
+    >
+    
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+
+    <div class="relative z-20 max-w-7xl mx-auto w-full">
+        
+        <h1 class="text-5xl md:text-8xl font-light tracking-tighter leading-[1.1] mb-8 text-white">
+            Projetos que <br> 
+            <span class="text-gray-400">conectam ideias.</span>
+        </h1>
+        
+        <p class="text-base md:text-lg text-gray-300 max-w-md mb-10 font-light leading-relaxed">
+            Criamos experiências focadas em clareza, estética contemporânea e resultados reais.
+        </p>
+        
+        <div class="flex flex-col gap-8">
+            <a href="#projetos" class="w-fit border-b border-white pb-1 text-[10px] uppercase tracking-widest text-white hover:text-gray-400 hover:border-gray-400 transition">
+                Ver Portfólio
+            </a>
+
+        <div class="border-t border-white/10 pt-8 mt-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:flex md:flex-wrap items-start md:items-center gap-x-6 gap-y-4 md:gap-y-3 text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] text-gray-400 font-light">
+        
+        <div class="flex items-center gap-2">
+            <span>Reformas</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Regularizações</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Gestão de Obras</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Projetos Técnicos</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Projetos de Interiores</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+            <span>Elaboração de Planilhas de Obra PCI/PLS CAIXA</span>
+            <span class="hidden md:inline text-white/20">•</span>
+        </div>
+        
+        <div class="flex items-center gap-2">
+            <span>Laudos de Avaliações por Inferência Estatística</span>
+        </div>
     </div>
-    <!-- Direita: contatos -->
-    <div class="topbar-contacts">
-      <a href="https://wa.me/5516997354455" class="topbar-contact" target="_blank" rel="noopener">
-        <i class="fa-brands fa-whatsapp"></i> (16) 99735-4455
-      </a>
-      <span class="topbar-divider">|</span>
-      <a href="mailto:contato@femgi.com.br" class="topbar-contact">
-        <i class="fa-solid fa-envelope"></i> contato@femgi.com.br
-      </a>
-      <span class="topbar-divider">|</span>
-      <a href="https://facebook.com/femgiarquitetura" class="topbar-contact" target="_blank" rel="noopener">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="https://instagram.com/femgiarquitetura" class="topbar-contact" target="_blank" rel="noopener">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
+</div>
+</section>
+
+<section id="projetos" class="bg-white pt-24 pb-12 px-6 md:px-12">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 mb-16 italic">Trabalhos Selecionados</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+    <div class="group cursor-pointer">
+        <div class="aspect-[566/455] overflow-hidden mb-6 bg-gray-100">
+            <img 
+                src="reforma-apartamento-araraquara-edificio-castro-alves.webp" 
+                alt="Reforma de apartamento em Araraquara - FEMGI Arquitetura" 
+                width="566" 
+                height="455"
+                loading="lazy"
+                class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105"
+            >
+        </div>
+            <h3 class="text-lg font-light text-black">Reforma Apartamento JR</h3>
+        <p class="text-gray-400 text-[10px] italic mt-2">Edificio Castro Alves - Araraquara / SP</p>
     </div>
-  </div>
+
+           <div class="group cursor-pointer">
+    <div class="aspect-[566/455] overflow-hidden mb-6 bg-gray-100">
+        <img 
+            src="projeto-tecnico-marcenaria-interiores-ribeirao-preto.webp" 
+            alt="Projeto técnico de Marcenaria em Ribeirão Preto - FEMGI" 
+            width="566" 
+            height="455"
+            loading="lazy"
+            class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105"
+        >
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-black font-medium">Projeto Técnico de Marcenaria AAM</h3>
+    <p class="text-gray-400 text-[10px] italic mt-2">Ribeirão Preto — SP</p>
 </div>
 
-<nav id="navbar">
-  <a href="#home"><img src="logo.svg" alt="FEMGI Arquitetura" height="50"></a>
-  <ul class="nav-links">
-    <li><a href="#problema">O Problema</a></li>
-    <li><a href="#servicos">Serviços</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="https://wa.me/5516997354455?text=Olá!%20Gostaria%20de%20regularizar%20meu%20imóvel." class="btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Fale Conosco</a></li>
-  </ul>
-  <button class="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+<div class="group cursor-pointer">
+    <div class="aspect-[566/455] overflow-hidden mb-6 bg-gray-100">
+        <img 
+            src="projeto-tecnico-arquitetura-fachada-village-damha-iii-araraquara.webp" 
+            alt="Projeto arquitetônico de fachada residencial de alto padrão no Village Damha III em Araraquara" 
+            width="566" 
+            height="455"
+            loading="lazy"
+            class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105"
+        >
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-black font-medium">Fachada RB</h3>
+    <p class="text-gray-400 text-[10px] italic mt-2">Condominio Village Damha III - Araraquara / SP</p>
+</div>
 
-<section id="home">
-  <div class="hero-content">
-    <div class="hero-badge">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-      Ribeirão Preto · SP
+<div class="group cursor-pointer">
+    <div class="aspect-[566/455] overflow-hidden mb-6 bg-gray-100">
+        <img 
+            src="projeto-de-interiores-arquitetura-alto-padrao-quinta-das-tipuanas-araraquara.webp" 
+            alt="Projeto de Interiores Alto Padrão no Condominio Quinta das Tipuanas em Araraquara/SP" 
+            width="566" 
+            height="455"
+            loading="lazy"
+            class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105"
+        >
     </div>
-    <h1>Regularização de Projetos e Obras em Ribeirão Preto</h1>
-    <p>Analisamos o seu caso e resolvemos todas as pendências junto à Prefeitura Municipal e Cartório de Registro de Imóveis de Ribeirão Preto.<br>Alvará · Habite-se · CND · Averbações e muito mais.</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/5516997354455?text=Olá!%20Gostaria%20de%20regularizar%20meu%20imóvel%20em%20Ribeirão%20Preto." class="btn-primary btn-hero-wa" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento</a>
-      <a href="#servicos" class="btn-outline btn-hero-outline">Ver serviços</a>
+    <h3 class="text-xs uppercase tracking-widest text-black font-medium">Projeto de Interiores MA</h3>
+    <p class="text-gray-400 text-[10px] italic mt-2">Condominio Quinta das Tipuanas - Araraquara / SP</p>
+</div>
+
+<div class="group cursor-pointer">
+    <div class="aspect-[566/455] overflow-hidden mb-6 bg-gray-100">
+        <img 
+            src="projeto-de-interiores-marcenaria-arquitetura-alto-padrao-marilia-sp.webp" 
+            alt="Projeto de interiores e marcenaria contemporânea em Marilia SP" 
+            width="566" 
+            height="455"
+            loading="lazy"
+            class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105"
+        >
     </div>
-    <div class="hero-stats">
-      <div class="stat-item"><strong>100%</strong><span>Digital e seguro</span></div>
-      <div class="stat-item"><strong>Ribeirão Preto</strong><span>Especialistas locais</span></div>
-      <div class="stat-item"><strong>Sem burocracia</strong><span>Para o proprietário</span></div>
+    <h3 class="text-xs uppercase tracking-widest text-black font-medium">Projeto de Interiores e Marcenaria</h3>
+    <p class="text-gray-400 text-[10px] italic mt-2">Marilia — SP</p>
+</div>
+
+<div class="group cursor-pointer">
+    <div class="aspect-[566/455] overflow-hidden mb-6 bg-gray-100">
+        <img 
+            src="reforma-apartamento-arquiteto-araraquara.webp" 
+            alt="Reforma de apartamento compacto pequeno em Araraquara" 
+            width="566" 
+            height="455"
+            loading="lazy"
+            class="projeto-img w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700 ease-in-out group-hover:scale-105"
+        >
     </div>
-  </div>
+    <h3 class="text-xs uppercase tracking-widest text-black font-medium">Reforma EZ</h3>
+    <p class="text-gray-400 text-[10px] italic mt-2">Araraquara — SP</p>
+</div>
+        </div>
+    </div>
 </section>
 
-<section id="problema">
-  <div class="problema-inner">
-    <div class="problema-left">
-      <span class="section-label">Situação atual</span>
-      <h2 class="section-title">Seu imóvel está com a documentação em dia?</h2>
-      <p class="section-text">É muito comum em Ribeirão Preto que imóveis passem por reformas ou ampliações sem que essas mudanças sejam registradas na Prefeitura. O problema é que essa irregularidade costuma aparecer nos piores momentos.</p>
-      <p class="section-text">Se você tem uma obra sem alvará, um imóvel sem Habite-se ou diferenças entre o tamanho real da casa e o que está no papel, a regularização é o caminho para evitar dores de cabeça.</p>
-      <div style="margin-top:1.5rem">
-        <a href="https://wa.me/5516997354455?text=Olá!%20Quero%20analisar%20a%20situação%20do%20meu%20imóvel." class="btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Analisar meu caso</a>
-      </div>
+<section id="solucoes" class="bg-white pt-12 pb-12 px-6 md:px-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+    <div>
+        <h2 class="text-[10px] md:text-xs uppercase tracking-[0.2em] text-gray-400 mb-3 italic">Expertise e Metodologia</h2>
+        <h3 class="text-3xl md:text-5xl font-light tracking-tighter text-black">solucoes</h3>
     </div>
-    <div class="problema-right">
-      <div class="prob-card">
-        <div class="prob-icon"><svg viewBox="0 0 24 24"><path d="M21 8L18.74 5.74A9.75 9.75 0 0 0 12 3C11 3 10.03 3.16 9.13 3.47"/><path d="M8 16H3v5"/><path d="M3 12C3 9.51 4 7.26 5.64 5.64"/><path d="m3 16 2.26 2.26A9.75 9.75 0 0 0 12 21c2.49 0 4.74-1 6.36-2.64"/><path d="M21 12c0 1-.16 1.97-.47 2.87"/><path d="M21 3v5h-5"/><path d="M22 22 2 2"/></svg></div>
-        <div><h3>Venda complicada</h3><p>Banco recusando o financiamento imobiliário pelo fato do imóvel não ter a construção regularizada na matrícula.</p></div>
-      </div>
-      <div class="prob-card">
-        <div class="prob-icon"><svg viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m14.5 12.5-5 5"/><path d="m9.5 12.5 5 5"/></svg></div>
-        <div><h3>Documentação com divergências</h3><p>Diferença entre área real e área registrada impedindo inventários, doações e outros processos legais.</p></div>
-      </div>
-      <div class="prob-card">
-        <div class="prob-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><line x1="9" y1="14" x2="15" y2="20"/><line x1="15" y1="14" x2="9" y2="20"/></svg></div>
-        <div><h3>Obra sem Habite-se</h3><p>Construção concluída sem o documento final impedindo a regularização perante prefeitura e cartório.</p></div>
-      </div>
-      <div class="prob-card">
-        <div class="prob-icon"><svg viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-.5"/><path d="M16 4h2a2 2 0 0 1 1.73 1"/><path d="M8 18h1"/><path d="M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"/></svg></div>
-        <div><h3>Risco de fiscalização</h3><p>Imóveis com obras não aprovadas estão sujeitos a multas pesadas e embargos pela Prefeitura.</p></div>
-      </div>
+    <a href="mailto:contato@femgi.com.br?subject=Solicitação de Contato" class="text-[10px] uppercase tracking-widest border-b border-black pb-1 hover:text-gray-400 hover:border-gray-400 transition inline-block">
+        Solicitar Consultoria
+    </a>
+</div>
+
+       <div class="grid grid-cols-1">
+    
+    <details class="group border-b border-gray-100 outline-none">
+        <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+            <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Arquitetura</span>
+            
+            <div class="flex items-center gap-4">
+                <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                    Laudos de Avaliação por Inferência Estatística: Precisão e Normatização
+                </h4>
+                <div class="icon-toggle shrink-0 transition-all duration-300"></div>
+            </div>
+        </summary>
+        <div class="pb-8 md:pl-32 max-w-3xl">
+            <p class="text-gray-500 font-light leading-relaxed">
+                Utilizamos um método aprimorado de análise de dados de mercado e regressão para estimar o valor de uma propriedade, reduzindo a subjetividade e oferecendo maior precisão nos resultados. Entregando valores de mercado incontestáveis, essenciais para decisões estratégicas em garantias bancárias, partilhas e processos judiciais. Unimos a conformidade técnica da NBR 14653 à clareza necessária para proteger seus interesses financeiros.
+            </p>
+        </div>
+    </details>
+
+    <details class="group border-b border-gray-100 outline-none">
+        <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+            <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Financiamento</span>
+            
+            <div class="flex items-center gap-4">
+                <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                    Gestão de Planilhas CAIXA (PCI/PLS): Viabilizando seu Financiamento Habitacional
+                </h4>
+                <div class="icon-toggle shrink-0 transition-all duration-300"></div>
+            </div>
+        </summary>
+        <div class="pb-8 md:pl-32 max-w-3xl">
+            <p class="text-gray-500 font-light leading-relaxed">
+                Somos especialistas em processos da Caixa Econômica Federal, gerimos toda a documentação técnica (PCI/PLS) para garantir a aprovação do seu financiamento e a liberação contínua de parcelas. Com a expertise de mais de 300 serviços analisados, elaborados e entregues, nossa gestão está preparada para evitar paralisações por erros documentais, assegurando que o fluxo de caixa e o cronograma da sua construção sigam sem interrupções.
+            </p>
+        </div>
+    </details>
+
+     <details class="group border-b border-gray-100 outline-none">
+        <summary class="flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center py-8 cursor-pointer list-none">
+            <span class="text-[9px] text-gray-300 font-light tracking-widest w-24 shrink-0 uppercase">Execução</span>
+            
+            <div class="flex items-center gap-4">
+                <h4 class="text-lg md:text-xl font-light text-black group-hover:text-gray-500 transition-colors duration-300">
+                    Acompanhamento Técnico e Gestão de Obras: projeto executado com qualidade, segurança e dentro do planejado
+                </h4>
+                <div class="icon-toggle shrink-0 transition-all duration-300"></div>
+            </div>
+        </summary>
+        <div class="pb-8 md:pl-32 max-w-3xl">
+            <p class="text-gray-500 font-light leading-relaxed">
+                Sua obra entregue exatamente como projetada, com zero estresse. Nossa gestão técnica é focada na fidelidade absoluta ao conceito arquitetônico, aliando rigor construtivo a um controle de qualidade minucioso. Gerenciamos prazos e processos para que você desfrute da evolução do seu projeto, com a certeza de que cada detalhe seja executado com máxima perfeição e eficiência.
+            </p>
+        </div>
+    </details>
     </div>
-  </div>
 </section>
 
-<section id="beneficios">
-  <div class="container">
-    <span class="section-label">Por que regularizar agora?</span>
-    <h2 class="section-title">Três razões para não esperar mais</h2>
-    <ul class="beneficios-list">
-      <li class="beneficio-item">
-        <div class="ben-num">1</div>
-        <div><h3>Garante a venda</h3><p>Evita que você perca um comprador porque o banco recusou o financiamento. Imóvel regular fecha negócio sem surpresas.</p></div>
-      </li>
-      <li class="beneficio-item">
-        <div class="ben-num">2</div>
-        <div><h3>Evita prejuízos</h3><p>Protege você de multas pesadas da Prefeitura e de embargos indesejados. Resolver agora custa muito menos do que lidar com as consequências.</p></div>
-      </li>
-      <li class="beneficio-item">
-        <div class="ben-num">3</div>
-        <div><h3>Valoriza seu patrimônio</h3><p>Imóvel totalmente regularizado vale mais no mercado e traz segurança jurídica completa para a sua família.</p></div>
-      </li>
-    </ul>
-  </div>
+<section id="contato" class="bg-white pt-12 pb-24 px-6 md:px-12 border-t border-gray-100">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+        
+        <div>
+            <h2 class="text-3xl md:text-5xl font-light tracking-tighter mb-8 text-black">
+                Vamos iniciar uma <br>
+                <span class="text-gray-400">nova conversa?</span>
+            </h2>
+            <p class="text-gray-500 font-light text-base md:text-lg mb-10">
+                Preencha os dados e fale diretamente conosco via WhatsApp.
+            </p>
+        </div>
+
+        <form id="whatsappForm" class="space-y-6">
+            <div class="border-b border-gray-200 py-2">
+                <input type="text" id="nome" placeholder="Seu Nome" required 
+                    class="w-full bg-transparent outline-none font-light text-sm placeholder-gray-300">
+            </div>
+            <div class="border-b border-gray-200 py-2">
+                <input type="text" id="projeto" placeholder="Tipo de Projeto (Ex: Reforma, Laudo...)" required 
+                    class="w-full bg-transparent outline-none font-light text-sm placeholder-gray-300">
+            </div>
+            <div class="border-b border-gray-200 py-2">
+                <textarea id="mensagem" placeholder="Sua Mensagem" rows="3" required
+                    class="w-full bg-transparent outline-none font-light text-sm placeholder-gray-300 resize-none"></textarea>
+            </div>
+            
+            <button type="submit" class="group flex items-center gap-3 text-[10px] uppercase tracking-widest border-b border-black pb-1 hover:text-gray-400 hover:border-gray-400 transition-all duration-300">
+                Enviar via WhatsApp
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </button>
+        </form>
+
+    </div>
 </section>
 
-<section id="servicos">
-  <div class="container">
-    <span class="section-label">Nossos serviços</span>
-    <h2 class="section-title">Soluções completas para regularização</h2>
-    <p class="section-text" style="max-width:700px">Cuidamos de todo o processo junto à Prefeitura de Ribeirão Preto, Receita Federal e Cartório de Registro de Imóveis, do início ao fim, para que você não precise se preocupar com burocracia.</p>
-    <div class="cards-grid">
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M10.5 22H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.706.706l3.588 3.588A2.4 2.4 0 0 1 20 8v6"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m14 20 2 2 4-4"/></svg></div>
-        <h3>Regularização de Projetos</h3>
-        <p>Regularização junto à Prefeitura Municipal com elaboração do projeto conforme a disposição física atual do imóvel.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z"/><path d="M14.487 7.858A1 1 0 0 1 14 7V2"/><path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516"/><path d="M8 18h1"/></svg></div>
-        <h3>Emissão de Alvará</h3>
-        <p>Para reformas ou construções a serem realizadas com autorização legal da Prefeitura Municipal.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M13.5 21H3a1 1 0 0 1-1-1v-9a1 1 0 0 1 .3-.7l9-8.1a1 1 0 0 1 1.4 0l9 8.1a1 1 0 0 1 .3.7v3.5"/><path d="m15 21 2 2 4-4"/></svg></div>
-        <h3>Emissão de Habite-se</h3>
-        <p>Imóvel com projeto e construção prontos, mas sem o documento oficial da Prefeitura atestando a conclusão conforme projeto aprovado.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3"/><path d="m16 19 2 2 4-4"/></svg></div>
-        <h3>Retificação de Área</h3>
-        <p>Adequação da metragem no IPTU e na Matrícula do Imóvel com a realidade física do terreno.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg></div>
-        <h3>Adequação de Acessibilidade</h3>
-        <p>Elaboração de projeto de adequação para imóveis comerciais conforme exigência da Prefeitura Municipal.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="m9 15 2 2 4-4"/></svg></div>
-        <h3>Emissão de CND</h3>
-        <p>Emissão de Certidão Negativa de Débitos junto à Receita Federal para averbação na matrícula do imóvel.</p>
-      </div>
-      <div class="svc-card">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M21 10.656V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h12.344"/><path d="m9 11 3 3L22 4"/></svg></div>
-        <h3>Averbação da Construção</h3>
-        <p>Assessoria completa no processo de averbação junto ao Cartório de Registro de Imóveis.</p>
-      </div>
-      <div class="svc-card highlight">
-        <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-        <h3>Não sabe por onde começar?</h3>
-        <p>Fale com nossa equipe agora. Analisamos seu caso gratuitamente e explicamos qual o caminho mais ágil para a regularização.</p>
-        <a href="https://wa.me/5516997354455?text=Olá!%20Gostaria%20de%20uma%20análise%20gratuita%20do%20meu%20imóvel." class="btn-primary" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Análise gratuita</a>
-      </div>
+<footer class="bg-white py-12 px-6 md:px-12 border-t border-gray-50">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div class="text-[10px] uppercase tracking-widest text-gray-400 font-light order-2 md:order-1">
+    <p>© 2025 Femgi Arquitetura LTDA | Design com propósito.</p>
+    <p style="text-transform: none; margin-top: 6px;">
+        Desenvolvido por 
+        <a href="https://www.studiogs.com.br" target="_blank" rel="noopener" 
+           style="text-decoration: none; color: inherit; font-weight: 300; transition: font-weight 0.2s ease;">
+            <strong style="font-weight: 300;" 
+                    onmouseover="this.style.fontWeight='700'" 
+                    onmouseout="this.style.fontWeight='300'">studioGS</strong>
+        </a>
+    </p>
+</div>
+
+        <div class="flex space-x-8 order-1 md:order-2 md:pr-40">
+            <a href="https://instagram.com/femgiarquitetura" target="_blank" class="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-black transition-colors duration-300">Instagram</a>
+        </div>
     </div>
-  </div>
-</section>
-
-<section id="faq">
-  <div class="container" style="max-width:820px">
-    <span class="section-label">Dúvidas frequentes</span>
-    <h2 class="section-title">Perguntas frequentes</h2>
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span class="faq-question">O que é regularização de imóvel e quando é necessária?</span>
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-        </button>
-        <div class="faq-answer">Regularização é o processo de adequar a situação legal de um imóvel às normas municipais e cartoriais. É necessária quando há construções, reformas ou ampliações realizadas sem aprovação prévia da Prefeitura, quando o imóvel não possui Habite-se, ou quando há divergências entre a área real e a registrada em cartório.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span class="faq-question">Quanto tempo leva para regularizar um imóvel em Ribeirão Preto?</span>
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-        </button>
-        <div class="faq-answer">O prazo varia conforme a complexidade do caso. Processos mais simples, como emissão de Habite-se para obras já concluídas, podem ser resolvidos em 60 a 90 dias. Regularizações que envolvem aprovação de projeto e múltiplos órgãos podem levar de 3 a 6 meses. Fazemos uma análise inicial para estimar o prazo real do seu caso.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span class="faq-question">Posso vender meu imóvel sem ele estar regularizado?</span>
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-        </button>
-        <div class="faq-answer">Tecnicamente é possível em algumas situações, mas na prática fica muito difícil. A maioria dos compradores financia o imóvel, e os bancos exigem que a construção esteja averbada na matrícula. Além disso, o comprador corre risco jurídico ao adquirir um imóvel irregular, o que costuma inviabilizar a negociação.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span class="faq-question">O que é o Habite-se e por que ele é importante?</span>
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-        </button>
-        <div class="faq-answer">O Habite-se é o documento emitido pela Prefeitura que atesta que uma construção foi concluída de acordo com o projeto aprovado e está apta para ser habitada. Sem ele, não é possível averbar a construção no cartório, e o imóvel permanece irregular perante instituições financeiras e o poder público.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span class="faq-question">Quais documentos preciso reunir para iniciar o processo?</span>
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-        </button>
-        <div class="faq-answer">Os documentos básicos são: matrícula atualizada do imóvel, IPTU atualizado, planta ou croqui da construção (se houver), documentos do proprietário (RG, CPF) e comprovante de endereço. Em alguns casos podem ser necessários documentos adicionais, que orientamos após a análise inicial gratuita.</div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-btn" aria-expanded="false">
-          <span class="faq-question">A FEMGI cuida de todo o processo ou preciso ir pessoalmente à Prefeitura?</span>
-          <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-        </button>
-        <div class="faq-answer">Cuidamos de todo o processo por você. Elaboramos o projeto, protocolamos a documentação, acompanhamos o andamento e intermediamos qualquer pendência. Você só precisa assinar a procuração no início e receber os documentos finais. Sem burocracia para o proprietário.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="cta">
-  <div class="container" style="position:relative;z-index:2;text-align:center">
-    <span class="section-label">Pronto para resolver?</span>
-    <h2 class="section-title">Fale com um arquiteto</h2>
-    <p class="section-text">Entre em contato pelo WhatsApp.<br>Resposta rápida e analise do seu imóvel sem compromisso.</p>
-    <a href="https://wa.me/5516997354455?text=Olá!%20Gostaria%20de%20regularizar%20meu%20imóvel%20em%20Ribeirão%20Preto." class="btn-primary" target="_blank" rel="noopener" style="font-size:1rem;padding:1rem 2.2rem"><i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp</a>
-    <div class="cta-badges">
-      <span class="cta-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Análise gratuita</span>
-      <span class="cta-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Atendimento em Ribeirão Preto</span>
-      <span class="cta-badge"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Sem burocracia para você</span>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <img src="logo-branca.svg" alt="FEMGI Arquitetura" height="67">
-      <span class="footer-slogan">Arquitetura com propósito</span>
-      <span class="footer-location"><i class="fa-solid fa-location-dot"></i> Ribeirão Preto, SP</span>
-    </div>
-    <div class="footer-col">
-      <h4>Serviços</h4>
-      <p class="footer-services">Regularização de Projetos · Emissão de Alvará<br>Emissão de Habite-se · Retificação de Área<br>Emissão de CND · Averbação da Construção</p>
-    </div>
-    <div class="footer-col">
-      <h4>Contato</h4>
-      <div class="footer-social">
-        <a href="https://instagram.com/femgiarquitetura" class="social-icon instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://facebook.com/femgiarquitetura" class="social-icon facebook" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="https://wa.me/5516997354455" class="social-icon whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="mailto:contato@femgi.com.br" class="social-icon email" aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
-        <a href="tel:+5516997354455" class="social-icon phone" aria-label="Telefone"><i class="fa-solid fa-phone"></i></a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>Registro no Conselho de Arquitetura e Urbanismo · CAU 71549-1 | CNPJ 62.429.872/0001-27.</p>
-    <p>© 2025 FEMGI Arquitetura LTDA. Todos os direitos reservados.</p>
-    <p>Regularização de Imóveis · Ribeirão Preto, SP</p>
-  </div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/5516997354455?text=Olá!%20Gostaria%20de%20regularizar%20meu%20imóvel." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><span class="wa-ring"></span><img src="whatsapp.svg" alt="WhatsApp"></a>
-
+<a href="https://wa.me/5516997354455" target="_blank" class="fixed bottom-8 right-8 z-[100] group flex items-center justify-center">
+    <span class="absolute right-14 bg-black text-white text-[10px] uppercase tracking-widest py-2 px-4 rounded-full opacity-0 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none whitespace-nowrap font-light">
+        Fale Conosco
+    </span>
+    <div class="w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center transition-all duration-500 ease-in-out group-hover:scale-110">
+        <img src="whatsapp.svg" alt="WhatsApp" 
+     class="w-7 h-7 md:w-12 md:h-12 object-contain transition-all duration-500 grayscale hover:grayscale-0">
+    </div>
+</a>
 <script>
-const navbar=document.getElementById('navbar');
-const topbar=document.querySelector('.topbar');
-const hero=document.getElementById('home');
-window.addEventListener('scroll',()=>{
-  const heroGone=scrollY>=hero.offsetHeight;
-  navbar.style.transform=heroGone?'translateY(0)':'translateY(-100%)';
-  navbar.classList.toggle('scrolled',heroGone);
-  topbar.style.transform=heroGone?'translateY(-100%)':'translateY(0)';
-});
-// FAQ accordion
-document.querySelectorAll('.faq-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
-    if(!isOpen)item.classList.add('open');
-    btn.setAttribute('aria-expanded',String(!isOpen));
-  });
-});
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const t=document.querySelector(a.getAttribute('href'));
-    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
-  });
-});
-// Hamburger menu
-const hamburger=document.querySelector('.nav-hamburger');
-const navLinks=document.querySelector('.nav-links');
-hamburger.addEventListener('click',()=>{
-  const isOpen=navbar.classList.toggle('nav-open');
-  navLinks.classList.toggle('open',isOpen);
-  hamburger.setAttribute('aria-expanded',String(isOpen));
-});
-navLinks.querySelectorAll('a').forEach(a=>{
-  a.addEventListener('click',()=>{
-    navbar.classList.remove('nav-open');
-    navLinks.classList.remove('open');
-    hamburger.setAttribute('aria-expanded','false');
-  });
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  if (isMobile) {
+    const observerOptions = {
+      root: null,
+      threshold: 0.2 
+    };
+
+    const revealOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          
+          if (entry.target.classList.contains('projeto-img')) {
+            entry.target.classList.remove('grayscale');
+          }
+          
+          if (entry.target.classList.contains('solucao-reveal')) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+            entry.target.style.color = "#000";
+          }
+
+          // Corrigido para o nome correto da constante
+          revealOnScroll.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // 2. Aplicando nas Imagens (Certifique-se de adicionar a classe projeto-img no HTML)
+    document.querySelectorAll('.projeto-img').forEach(img => {
+      revealOnScroll.observe(img);
+    });
+
+    // 3. Aplicando nas solucoes (H4)
+    document.querySelectorAll('details h4').forEach(title => {
+      title.classList.add('solucao-reveal');
+      title.style.opacity = "0";
+      title.style.transform = "translateY(20px)";
+      title.style.transition = "all 0.8s ease-out";
+      title.style.color = "#9CA3AF"; 
+      
+      revealOnScroll.observe(title);
+    });
+  }
+
+  document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // 1. Pega os valores dos campos
+    const nome = document.getElementById('nome').value;
+    const projeto = document.getElementById('projeto').value;
+    const mensagem = document.getElementById('mensagem').value;
+    const seuTelefone = "5516997354455"; // Seu número com DDD (sem espaços ou traços)
+
+    // 2. Monta o texto da mensagem (Codificado para URL)
+    const texto = `Olá FEMGI! Meu nome é *${nome}*.\n\nEstou entrando em contato sobre: *${projeto}*.\n\n*Mensagem:* ${mensagem}`;
+    const textoCodificado = encodeURIComponent(texto);
+
+    // 3. Cria o link final
+    const url = `https://wa.me/${seuTelefone}?text=${textoCodificado}`;
+
+    // 4. Abre o WhatsApp em uma nova aba
+    window.open(url, '_blank');
 });
 </script>
+<style>
+/*! tailwindcss v4.2.4 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-sky-300: oklch(82.8% 0.111 230.318);
+    --color-sky-400: oklch(74.6% 0.16 232.661);
+    --color-sky-800: oklch(44.3% 0.11 240.79);
+    --color-gray-50: oklch(98.5% 0.002 247.839);
+    --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-700: oklch(37.3% 0.034 259.733);
+    --color-gray-900: oklch(21% 0.034 264.665);
+    --color-gray-950: oklch(13% 0.028 261.692);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-md: 28rem;
+    --container-lg: 32rem;
+    --container-3xl: 48rem;
+    --container-7xl: 80rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --text-8xl: 6rem;
+    --text-8xl--line-height: 1;
+    --font-weight-light: 300;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --tracking-tighter: -0.05em;
+    --tracking-widest: 0.1em;
+    --leading-relaxed: 1.625;
+    --radius-xl: 0.75rem;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --blur-md: 12px;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button)) or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none!important;
+  }
+}
+@layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .fixed {
+    position: fixed;
+  }
+  .relative {
+    position: relative;
+  }
+  .sticky {
+    position: sticky;
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
+  .-top-px {
+    top: -1px;
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .-right-px {
+    right: -1px;
+  }
+  .right-8 {
+    right: calc(var(--spacing) * 8);
+  }
+  .right-14 {
+    right: calc(var(--spacing) * 14);
+  }
+  .-bottom-px {
+    bottom: -1px;
+  }
+  .bottom-8 {
+    bottom: calc(var(--spacing) * 8);
+  }
+  .-left-px {
+    left: -1px;
+  }
+  .z-10 {
+    z-index: 10;
+  }
+  .z-20 {
+    z-index: 20;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .z-\[100\] {
+    z-index: 100;
+  }
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
+  .col-span-full {
+    grid-column: 1 / -1;
+  }
+  .col-start-1 {
+    grid-column-start: 1;
+  }
+  .col-start-2 {
+    grid-column-start: 2;
+  }
+  .col-start-3 {
+    grid-column-start: 3;
+  }
+  .col-start-4 {
+    grid-column-start: 4;
+  }
+  .row-span-full {
+    grid-row: 1 / -1;
+  }
+  .row-start-1 {
+    grid-row-start: 1;
+  }
+  .row-start-2 {
+    grid-row-start: 2;
+  }
+  .row-start-3 {
+    grid-row-start: 3;
+  }
+  .row-start-4 {
+    grid-row-start: 4;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .my-6 {
+    margin-block: calc(var(--spacing) * 6);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-11\.5 {
+    margin-bottom: calc(var(--spacing) * 11.5);
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
+  }
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .aspect-\[566\/455\] {
+    aspect-ratio: 566/455;
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-\[1lh\] {
+    height: 1lh;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-px {
+    height: 1px;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
+  }
+  .w-5\.5 {
+    width: calc(var(--spacing) * 5.5);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
+  .w-auto {
+    width: auto;
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-7xl {
+    max-width: var(--container-7xl);
+  }
+  .max-w-lg {
+    max-width: var(--container-lg);
+  }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .resize-none {
+    resize: none;
+  }
+  .list-none {
+    list-style-type: none;
+  }
+  .grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  .grid-cols-\[1fr_2\.5rem_auto_2\.5rem_1fr\] {
+    grid-template-columns: 1fr 2.5rem auto 2.5rem 1fr;
+  }
+  .grid-rows-\[1fr_1px_auto_1px_1fr\] {
+    grid-template-rows: 1fr 1px auto 1px 1fr;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
+  .gap-12 {
+    gap: calc(var(--spacing) * 12);
+  }
+  .gap-16 {
+    gap: calc(var(--spacing) * 16);
+  }
+  .space-y-3 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-6 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 6) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .gap-x-6 {
+    column-gap: calc(var(--spacing) * 6);
+  }
+  .space-x-4 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 4) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
+  .space-x-8 {
+    :where(& > :not(:last-child)) {
+      --tw-space-x-reverse: 0;
+      margin-inline-start: calc(calc(var(--spacing) * 8) * var(--tw-space-x-reverse));
+      margin-inline-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse)));
+    }
+  }
+  .gap-y-4 {
+    row-gap: calc(var(--spacing) * 4);
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border-x {
+    border-inline-style: var(--tw-border-style);
+    border-inline-width: 1px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-\(--pattern-fg\) {
+    border-color: var(--pattern-fg);
+  }
+  .border-black {
+    border-color: var(--color-black);
+  }
+  .border-gray-50 {
+    border-color: var(--color-gray-50);
+  }
+  .border-gray-100 {
+    border-color: var(--color-gray-100);
+  }
+  .border-gray-200 {
+    border-color: var(--color-gray-200);
+  }
+  .border-white {
+    border-color: var(--color-white);
+  }
+  .border-white\/10 {
+    border-color: color-mix(in srgb, #fff 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+    }
+  }
+  .border-x-\(--pattern-fg\) {
+    border-inline-color: var(--pattern-fg);
+  }
+  .bg-\(--pattern-fg\) {
+    background-color: var(--pattern-fg);
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-white\/90 {
+    background-color: color-mix(in srgb, #fff 90%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 90%, transparent);
+    }
+  }
+  .bg-gradient-to-t {
+    --tw-gradient-position: to top in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .bg-\[image\:repeating-linear-gradient\(315deg\,_var\(--pattern-fg\)_0\,_var\(--pattern-fg\)_1px\,_transparent_0\,_transparent_50\%\)\] {
+    background-image: repeating-linear-gradient(315deg, var(--pattern-fg) 0, var(--pattern-fg) 1px, transparent 0, transparent 50%);
+  }
+  .from-black\/80 {
+    --tw-gradient-from: color-mix(in srgb, #000 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-from: color-mix(in oklab, var(--color-black) 80%, transparent);
+    }
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .via-black\/20 {
+    --tw-gradient-via: color-mix(in srgb, #000 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-via: color-mix(in oklab, var(--color-black) 20%, transparent);
+    }
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .to-transparent {
+    --tw-gradient-to: transparent;
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .bg-\[size\:10px_10px\] {
+    background-size: 10px 10px;
+  }
+  .bg-fixed {
+    background-attachment: fixed;
+  }
+  .fill-sky-400\/25 {
+    fill: color-mix(in srgb, oklch(74.6% 0.16 232.661) 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      fill: color-mix(in oklab, var(--color-sky-400) 25%, transparent);
+    }
+  }
+  .stroke-sky-400\/25 {
+    stroke: color-mix(in srgb, oklch(74.6% 0.16 232.661) 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      stroke: color-mix(in oklab, var(--color-sky-400) 25%, transparent);
+    }
+  }
+  .stroke-sky-800 {
+    stroke: var(--color-sky-800);
+  }
+  .object-contain {
+    object-fit: contain;
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-8 {
+    padding-block: calc(var(--spacing) * 8);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
+  .pt-8 {
+    padding-top: calc(var(--spacing) * 8);
+  }
+  .pt-12 {
+    padding-top: calc(var(--spacing) * 12);
+  }
+  .pt-24 {
+    padding-top: calc(var(--spacing) * 24);
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
+  }
+  .pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
+  }
+  .pb-12 {
+    padding-bottom: calc(var(--spacing) * 12);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pb-24 {
+    padding-bottom: calc(var(--spacing) * 24);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-sm\/7 {
+    font-size: var(--text-sm);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[9px\] {
+    font-size: 9px;
+  }
+  .text-\[10px\] {
+    font-size: 10px;
+  }
+  .leading-\[1\.1\] {
+    --tw-leading: 1.1;
+    line-height: 1.1;
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
+  }
+  .font-light {
+    --tw-font-weight: var(--font-weight-light);
+    font-weight: var(--font-weight-light);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-\[0\.2em\] {
+    --tw-tracking: 0.2em;
+    letter-spacing: 0.2em;
+  }
+  .tracking-tighter {
+    --tw-tracking: var(--tracking-tighter);
+    letter-spacing: var(--tracking-tighter);
+  }
+  .tracking-widest {
+    --tw-tracking: var(--tracking-widest);
+    letter-spacing: var(--tracking-widest);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-black {
+    color: var(--color-black);
+  }
+  .text-gray-300 {
+    color: var(--color-gray-300);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
+  }
+  .text-gray-500 {
+    color: var(--color-gray-500);
+  }
+  .text-gray-700 {
+    color: var(--color-gray-700);
+  }
+  .text-gray-900 {
+    color: var(--color-gray-900);
+  }
+  .text-gray-950 {
+    color: var(--color-gray-950);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .text-white\/20 {
+    color: color-mix(in srgb, #fff 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 20%, transparent);
+    }
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .decoration-gray-300 {
+    text-decoration-color: var(--color-gray-300);
+  }
+  .decoration-sky-400 {
+    text-decoration-color: var(--color-sky-400);
+  }
+  .underline-offset-3 {
+    text-underline-offset: 3px;
+  }
+  .underline-offset-4 {
+    text-underline-offset: 4px;
+  }
+  .placeholder-gray-300 {
+    &::placeholder {
+      color: var(--color-gray-300);
+    }
+  }
+  .opacity-0 {
+    opacity: 0%;
+  }
+  .opacity-60 {
+    opacity: 60%;
+  }
+  .opacity-100 {
+    opacity: 100%;
+  }
+  .grayscale {
+    --tw-grayscale: grayscale(100%);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .backdrop-blur-md {
+    --tw-backdrop-blur: blur(var(--blur-md));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-opacity {
+    transition-property: opacity;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  .duration-700 {
+    --tw-duration: 700ms;
+    transition-duration: 700ms;
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+  }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .\[--pattern-fg\:var\(--color-gray-950\)\]\/5 {
+    --pattern-fg: color-mix(in srgb, oklch(13% 0.028 261.692) 5%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --pattern-fg: color-mix(in oklab, var(--color-gray-950) 5%, transparent);
+    }
+  }
+  .not-dark\:hidden {
+    @media not (prefers-color-scheme: dark) {
+      display: none;
+    }
+  }
+  .group-open\:rotate-90 {
+    &:is(:where(.group):is([open], :popover-open, :open) *) {
+      rotate: 90deg;
+    }
+  }
+  .group-hover\:translate-x-1 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-x: calc(var(--spacing) * 1);
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
+  .group-hover\:scale-105 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 105%;
+        --tw-scale-y: 105%;
+        --tw-scale-z: 105%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .group-hover\:scale-110 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-scale-x: 110%;
+        --tw-scale-y: 110%;
+        --tw-scale-z: 110%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+  }
+  .group-hover\:text-gray-500 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-gray-500);
+      }
+    }
+  }
+  .group-hover\:opacity-40 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        opacity: 40%;
+      }
+    }
+  }
+  .group-hover\:opacity-70 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        opacity: 70%;
+      }
+    }
+  }
+  .hover\:border-gray-400 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-gray-400);
+      }
+    }
+  }
+  .hover\:text-black {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-black);
+      }
+    }
+  }
+  .hover\:text-gray-400 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-400);
+      }
+    }
+  }
+  .hover\:decoration-black {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-color: var(--color-black);
+      }
+    }
+  }
+  .hover\:decoration-2 {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-thickness: 2px;
+      }
+    }
+  }
+  .hover\:grayscale-0 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-grayscale: grayscale(0%);
+        filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+      }
+    }
+  }
+  .sm\:grid-cols-2 {
+    @media (width >= 40rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:order-1 {
+    @media (width >= 48rem) {
+      order: 1;
+    }
+  }
+  .md\:order-2 {
+    @media (width >= 48rem) {
+      order: 2;
+    }
+  }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .md\:inline {
+    @media (width >= 48rem) {
+      display: inline;
+    }
+  }
+  .md\:h-8 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:h-12 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:h-16 {
+    @media (width >= 48rem) {
+      height: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:w-12 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:w-16 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:flex-wrap {
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
+    }
+  }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
+    }
+  }
+  .md\:items-end {
+    @media (width >= 48rem) {
+      align-items: flex-end;
+    }
+  }
+  .md\:gap-8 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:gap-16 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:space-x-8 {
+    @media (width >= 48rem) {
+      :where(& > :not(:last-child)) {
+        --tw-space-x-reverse: 0;
+        margin-inline-start: calc(calc(var(--spacing) * 8) * var(--tw-space-x-reverse));
+        margin-inline-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-x-reverse)));
+      }
+    }
+  }
+  .md\:gap-y-3 {
+    @media (width >= 48rem) {
+      row-gap: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:px-12 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+  }
+  .md\:pr-40 {
+    @media (width >= 48rem) {
+      padding-right: calc(var(--spacing) * 40);
+    }
+  }
+  .md\:pb-32 {
+    @media (width >= 48rem) {
+      padding-bottom: calc(var(--spacing) * 32);
+    }
+  }
+  .md\:pl-32 {
+    @media (width >= 48rem) {
+      padding-left: calc(var(--spacing) * 32);
+    }
+  }
+  .md\:text-5xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
+  .md\:text-8xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-8xl);
+      line-height: var(--tw-leading, var(--text-8xl--line-height));
+    }
+  }
+  .md\:text-lg {
+    @media (width >= 48rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
+  .md\:text-xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .md\:text-xs {
+    @media (width >= 48rem) {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
+  }
+  .md\:text-\[10px\] {
+    @media (width >= 48rem) {
+      font-size: 10px;
+    }
+  }
+  .md\:tracking-\[0\.3em\] {
+    @media (width >= 48rem) {
+      --tw-tracking: 0.3em;
+      letter-spacing: 0.3em;
+    }
+  }
+  .lg\:grid-cols-3 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .dark\:hidden {
+    @media (prefers-color-scheme: dark) {
+      display: none;
+    }
+  }
+  .dark\:bg-gray-950 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-gray-950);
+    }
+  }
+  .dark\:bg-white\/10 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in srgb, #fff 10%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+      }
+    }
+  }
+  .dark\:stroke-sky-300 {
+    @media (prefers-color-scheme: dark) {
+      stroke: var(--color-sky-300);
+    }
+  }
+  .dark\:text-gray-300 {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-gray-300);
+    }
+  }
+  .dark\:text-white {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
+  }
+  .dark\:\[--pattern-fg\:var\(--color-white\)\]\/10 {
+    @media (prefers-color-scheme: dark) {
+      --pattern-fg: color-mix(in srgb, #fff 10%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --pattern-fg: color-mix(in oklab, var(--color-white) 10%, transparent);
+      }
+    }
+  }
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-space-x-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-backdrop-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-space-y-reverse: 0;
+      --tw-space-x-reverse: 0;
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
+      --tw-backdrop-blur: initial;
+      --tw-backdrop-brightness: initial;
+      --tw-backdrop-contrast: initial;
+      --tw-backdrop-grayscale: initial;
+      --tw-backdrop-hue-rotate: initial;
+      --tw-backdrop-invert: initial;
+      --tw-backdrop-opacity: initial;
+      --tw-backdrop-saturate: initial;
+      --tw-backdrop-sepia: initial;
+      --tw-duration: initial;
+      --tw-ease: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
+    }
+  }
+  /* Remove a seta padrão do navegador */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Define o estilo do ícone baseado no estado do details */
+.icon-toggle::before {
+    content: '+';
+    font-family: Arial, sans-serif; /* Garante que o símbolo apareça */
+    font-size: 24px;
+    color: #D1D5DB; /* Cor gray-300 */
+}
+
+details[open] .icon-toggle::before {
+    content: '−'; /* Sinal de menos matemático para ficar alinhado */
+}
+}
+
+a:focus, a:focus-visible {
+    outline: none !important;
+}
+
+header a:focus,
+header a:focus-visible,
+header a:focus-within {
+    outline: none !important;
+    box-shadow: none !important;
+}
+</style>
 </body>
 </html>
